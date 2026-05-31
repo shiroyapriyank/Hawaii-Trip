@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌺 Hawaii Trip 2026 — Priyank & Saloni</title>
+  <style>
+    :root {
+      --ocean: #0077b6;
+      --ocean-light: #caf0f8;
+      --sand: #f9f3e8;
+      --coral: #e76f51;
+      --green: #2d6a4f;
+      --green-light: #d8f3dc;
+      --yellow: #f4a261;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --tag-res: #fff3cd;
+      --tag-res-text: #856404;
+      --tag-booked: #d1fae5;
+      --tag-booked-text: #065f46;
+      --tag-watch: #fce7f3;
+      --tag-watch-text: #9d174d;
+      --urgent-bg: #fff1f0;
+      --urgent-border: #ffa39e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--sand);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* ── Header ── */
+    .hero {
+      background: linear-gradient(135deg, #0077b6 0%, #023e8a 60%, #2d6a4f 100%);
+      color: white;
+      padding: 2rem 1.25rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; }
+    .hero .subtitle { opacity: 0.9; margin-top: 0.4rem; font-size: 0.95rem; }
+    .hero .dates {
+      display: inline-block;
+      margin-top: 0.75rem;
+      background: rgba(255,255,255,0.15);
+      padding: 0.3rem 1rem;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Nav tabs ── */
+    .tabs {
+      display: flex;
+      background: white;
+      border-bottom: 2px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      flex: none;
+      padding: 0.75rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+    .tab.active { color: var(--ocean); border-bottom-color: var(--ocean); }
+    .tab:hover:not(.active) { color: var(--text); }
+
+    /* ── Content ── */
+    .content { max-width: 700px; margin: 0 auto; padding: 1rem 1rem 4rem; }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    /* ── Cards ── */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+    .status-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .card-title { font-weight: 700; font-size: 0.95rem; color: var(--text); line-height: 1.3; }
+    .card-body { font-size: 0.85rem; color: #4b5563; line-height: 1.5; }
+    .card-body a { color: var(--ocean); text-decoration: none; }
+    .card-body a:hover { text-decoration: underline; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 99px;
+      margin-right: 0.3rem;
+      margin-top: 0.4rem;
+    }
+    .tag-res { background: var(--tag-res); color: var(--tag-res-text); }
+    .tag-free { background: var(--green-light); color: var(--green); }
+    .tag-tip { background: #e0f2fe; color: #075985; }
+    .tag-veg { background: #fef9c3; color: #713f12; }
+
+    /* ── Section headers ── */
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin: 1.5rem 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-title:first-child { margin-top: 0.5rem; }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Urgent countdown ── */
+    .urgent-card {
+      background: var(--urgent-bg);
+      border: 1px solid var(--urgent-border);
+      border-radius: 12px;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .urgent-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ffd6d4;
+      font-size: 0.85rem;
+    }
+    .urgent-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .urgent-what { font-weight: 600; color: var(--text); }
+    .urgent-when { font-size: 0.78rem; color: var(--coral); font-weight: 700; white-space: nowrap; }
+    .urgent-link a { color: var(--ocean); font-size: 0.78rem; }
+
+    /* ── Booking table ── */
+    .booking-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+    }
+    .booking-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .booking-row:last-child { border-bottom: none; }
+    .booking-what { font-weight: 600; font-size: 0.88rem; }
+    .booking-detail { font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+    .booking-detail a { color: var(--ocean); }
+    .booking-when {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: white;
+      background: var(--ocean);
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      white-space: nowrap;
+      text-align: center;
+    }
+    .booking-when.asap { background: var(--coral); }
+    .booking-when.soon { background: var(--yellow); color: var(--text); }
+
+    /* ── Flight table ── */
+    .flight-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+    }
+    .flight-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    .flight-row:last-child { border-bottom: none; }
+    .flight-row.alert-row { background: #fff7ed; }
+    .flight-num { font-weight: 700; color: var(--ocean); width: 60px; flex-shrink: 0; font-size: 0.8rem; }
+    .flight-route { font-weight: 600; flex: 1; }
+    .flight-time { color: var(--muted); font-size: 0.78rem; }
+    .flight-note { font-size: 0.75rem; color: var(--coral); font-weight: 600; }
+
+    /* ── Hotel cards ── */
+    .hotel-card {
+      background: white;
+      border-radius: 12px;
+      border: 2px solid var(--ocean-light);
+      padding: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .hotel-name { font-weight: 700; font-size: 1rem; color: var(--text); }
+    .hotel-dates { font-size: 0.82rem; color: var(--muted); margin: 0.2rem 0 0.6rem; }
+    .hotel-perks { font-size: 0.82rem; color: #374151; }
+    .hotel-perk { display: flex; align-items: flex-start; gap: 0.4rem; margin-bottom: 0.2rem; }
+    .perk-icon { flex-shrink: 0; }
+
+    /* ── Day itinerary ── */
+    .day-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .day-label {
+      flex-shrink: 0;
+      text-align: center;
+      width: 52px;
+    }
+    .day-num { font-size: 1.4rem; font-weight: 800; color: var(--ocean); line-height: 1; }
+    .day-date { font-size: 0.68rem; color: var(--muted); margin-top: 0.15rem; }
+    .day-body { flex: 1; }
+    .day-island {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--coral);
+      margin-bottom: 0.15rem;
+    }
+    .day-title { font-weight: 700; font-size: 0.9rem; }
+    .day-desc { font-size: 0.82rem; color: #6b7280; margin-top: 0.2rem; }
+
+    /* ── Tips ── */
+    .tip-card {
+      background: white;
+      border-left: 4px solid var(--ocean);
+      border-radius: 0 12px 12px 0;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.85rem;
+    }
+    .tip-card.coral { border-left-color: var(--coral); }
+    .tip-card.green { border-left-color: var(--green); }
+    .tip-card strong { display: block; margin-bottom: 0.2rem; font-size: 0.88rem; }
+
+    /* ── Status legend ── */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+    }
+
+    /* ── Info banner ── */
+    .info-banner {
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.83rem;
+      color: #0c4a6e;
+      margin-bottom: 1rem;
+    }
+    .info-banner strong { display: block; margin-bottom: 0.2rem; }
+
+    /* ── Misc ── */
+    .divider { height: 1px; background: var(--border); margin: 1rem 0; }
+    .last-updated { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div style="font-size:2rem">🌺</div>
+    <h1>Hawaii Trip 2026</h1>
+    <div class="subtitle">Priyank &amp; Saloni</div>
+    <div class="dates">Aug 27 – Sep 4 · O'ahu then Maui</div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs" role="tablist">
+  <button class="tab active" onclick="showTab('booking')" role="tab">⏰ Bookings</button>
+  <button class="tab" onclick="showTab('oahu')" role="tab">🌺 O'ahu</button>
+  <button class="tab" onclick="showTab('maui')" role="tab">🌋 Maui</button>
+  <button class="tab" onclick="showTab('itinerary')" role="tab">🗓 Plan</button>
+  <button class="tab" onclick="showTab('logistics')" role="tab">✈️ Logistics</button>
+  <button class="tab" onclick="showTab('tips')" role="tab">💡 Tips</button>
+</div>
+
+<div class="content">
+
+  <!-- ══════════════════════════════════════
+       TAB: BOOKINGS
+  ══════════════════════════════════════ -->
+  <div class="section active" id="tab-booking">
+
+    <div class="info-banner">
+      <strong>💡 Timezone note</strong>
+      HST = Columbus (EDT) − 6 hrs in summer. A 7 AM HST booking window = <strong>1 PM Columbus time.</strong> Set a calendar alarm 10 min early — these sell out in seconds.
+    </div>
+
+    <div class="section-title">🚨 Act Now</div>
+
+    <div class="urgent-card">
+      <div class="urgent-row">
+        <div>
+          <div class="urgent-what">Mama's Fish House — Maui dinner</div>
+          <div class="urgent-link"><a href="https://www.mamasfishhouse.com" target="_blank">mamasfishhouse.com</a> · ~$80–120/person · Ask about veg options</div>
+        </div>
+        <div class="urgent-when">ASAP</div>
+      </div>
+      <div class="urgent-row">
+        <div>
+          <div class="urgent-what">⭐ Andaz Maui — Book before Jun 30!</div>
+          <div class="urgent-link"><a href="https://travel.americanexpress.com" target="_blank">AmexTravel.com</a> · $750 property credit expires Jun 30</div>
+        </div>
+        <div class="urgent-when">ASAP</div>
+      </div>
+      <div class="urgent-row">
+        <div>
+          <div class="urgent-what">Pearl Harbor USS Arizona</div>
+          <div class="urgent-link"><a href="https://recreation.gov" target="_blank">recreation.gov</a> · Free + $1 fee</div>
+        </div>
+        <div class="urgent-when">ASAP</div>
+      </div>
+      <div class="urgent-row">
+        <div>
+          <div class="urgent-what">HNL → OGG inter-island flight (Aug 31)</div>
+          <div class="urgent-link"><a href="https://www.hawaiianairlines.com" target="_blank">Hawaiian Airlines</a> or <a href="https://www.southwest.com" target="_blank">Southwest</a> · ~$60–90</div>
+        </div>
+        <div class="urgent-when">ASAP</div>
+      </div>
+      <div class="urgent-row">
+        <div>
+          <div class="urgent-what">Molokini Snorkel Tour (Sep 1)</div>
+          <div class="urgent-link"><a href="https://sailtrilogy.com" target="_blank">Trilogy</a> or <a href="https://www.prideofmaui.com" target="_blank">Pride of Maui</a> · ~$120–150/person</div>
+        </div>
+        <div class="urgent-when">ASAP</div>
+      </div>
+    </div>
+
+    <div class="section-title">📅 Timed Windows</div>
+
+    <div class="booking-card">
+      <div class="booking-row">
+        <div>
+          <div class="booking-what">🌅 Haleakalā Sunrise (Sep 3)</div>
+          <div class="booking-detail"><a href="https://recreation.gov" target="_blank">recreation.gov</a> · $1 + $30/vehicle · 60-day window. Also book Sep 2 backup (Jul 3).</div>
+        </div>
+        <div class="booking-when asap">Jul 4<br>1 PM EDT</div>
+      </div>
+      <div class="booking-row">
+        <div>
+          <div class="booking-what">🏨 Royal Hawaiian FHR</div>
+          <div class="booking-detail"><a href="https://travel.americanexpress.com" target="_blank">AmexTravel.com</a> · Book after Jul 1 to capture Jul–Dec $300 credit</div>
+        </div>
+        <div class="booking-when soon">Jul 28<br>1 PM EDT</div>
+      </div>
+      <div class="booking-row">
+        <div>
+          <div class="booking-what">🖤 Wai'anapanapa Black Sand Beach (Sep 1)</div>
+          <div class="booking-detail"><a href="https://gostateparks.hawaii.gov" target="_blank">gostateparks.hawaii.gov</a> · $5/person + $10/vehicle · 30-day window</div>
+        </div>
+        <div class="booking-when soon">Aug 1<br>1 PM EDT</div>
+      </div>
+      <div class="booking-row">
+        <div>
+          <div class="booking-what">🌿 Iao Valley (if reopened)</div>
+          <div class="booking-detail"><a href="https://gostateparks.hawaii.gov" target="_blank">gostateparks.hawaii.gov</a> · $5/person + $10/vehicle · Currently CLOSED — monitor site</div>
+        </div>
+        <div class="booking-when soon">Aug 1<br>1 PM EDT</div>
+      </div>
+      <div class="booking-row">
+        <div>
+          <div class="booking-what">💎 Diamond Head Crater (Sep 3)</div>
+          <div class="booking-detail"><a href="https://hawaiistateparks.reserveamerica.com" target="_blank">reserveamerica.com</a> · $5/person + $10/vehicle · Book 7–8 AM slot</div>
+        </div>
+        <div class="booking-when soon">Aug 2<br>1 PM EDT</div>
+      </div>
+      <div class="booking-row">
+        <div>
+          <div class="booking-what">🐠 Hanauma Bay (Aug 28)</div>
+          <div class="booking-detail"><a href="https://dlnr.hawaii.gov/hanauma" target="_blank">dlnr.hawaii.gov/hanauma</a> · $25/person · 2-day window. Closed Mon &amp; Tue.</div>
+        </div>
+        <div class="booking-when soon">Aug 26<br>1 PM EDT</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TAB: O'AHU
+  ══════════════════════════════════════ -->
+  <div class="section" id="tab-oahu">
+
+    <div class="info-banner">
+      <strong>O'ahu · Aug 27–31 · 4 nights</strong>
+      Staying at The Royal Hawaiian, Waikiki. Arriving ~midnight Aug 27/28.
+    </div>
+
+    <div class="section-title">🎫 Needs Reservation</div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="status-icon">🔲</span>
+        <div>
+          <div class="card-title">Pearl Harbor / USS Arizona Memorial</div>
+          <span class="tag tag-res">Book 60 days ahead — ASAP</span>
+        </div>
+      </div>
+      <div class="card-body">
+        Most emotionally powerful site in Hawaii. Budget 3–4 hrs. Includes boat ride to the memorial over the sunken ship. Technically free but sells out — standby line = 2–3 hr wait.<br>
+        <a href="https://recreation.gov" target="_blank">recreation.gov</a> · Free + $1 fee
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="status-icon">🔲</span>
+        <div>
+          <div class="card-title">Diamond Head Crater Hike</div>
+          <span class="tag tag-res">Book 30 days ahead — Aug 2</span>
+        </div>
+      </div>
+      <div class="card-body">
+        1.8-mile hike, 560 ft elevation. Book 7–8 AM slot — cooler, golden light, fewer crowds. Zero shade on the trail — sunscreen, hat, water essential.<br>
+        <a href="https://hawaiistateparks.reserveamerica.com" target="_blank">reserveamerica.com</a> · $5/person + $10/vehicle
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="status-icon">🔲</span>
+        <div>
+          <div class="card-title">Hanauma Bay Snorkel</div>
+          <span class="tag tag-res">Book 2 days ahead — Aug 26 @ 1 PM Columbus</span>
+        </div>
+      </div>
+      <div class="card-body">
+        Protected volcanic crater bay — 400+ fish species. Best snorkel on Oahu. Tickets drop at 7 AM HST sharp and sell out in minutes. <strong>Closed Monday &amp; Tuesday</strong> — plan for Wed–Sun. Arrive early, parking fills by 8 AM.<br>
+        <a href="https://dlnr.hawaii.gov/hanauma" target="_blank">dlnr.hawaii.gov/hanauma</a> · $25/person
+      </div>
+    </div>
+
+    <div class="section-title">🐠 Beaches & Water</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Waikiki Beach / Kuhio Beach</div><span class="tag tag-free">No reservation</span></div>
+      </div>
+      <div class="card-body">Steps from Royal Hawaiian. Great for a first morning, surfing lessons ($30–50/hr), and outrigger canoe rides. Most touristy but incredibly convenient.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Ala Moana Beach Park</div><span class="tag tag-free">No reservation · Free</span></div>
+      </div>
+      <div class="card-body">Locals' favourite — calm, protected, beautiful sunset views of Diamond Head. 10-min drive from Waikiki. Better swimming than Waikiki.</div>
+    </div>
+
+    <div class="section-title">🏛️ History & Culture</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Iolani Palace</div></div>
+      </div>
+      <div class="card-body">Only official royal palace on US soil. Tours Tue–Sat. ~$30/person. 1–1.5 hrs.<br>
+        <a href="https://www.iolanipalace.org" target="_blank">iolanipalace.org</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Bishop Museum</div></div>
+      </div>
+      <div class="card-body">Hawaii's finest natural history &amp; culture museum. $25/person. Add $3 for planetarium show. Half-day activity.</div>
+    </div>
+
+    <div class="section-title">🏔️ Nature & Views</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Pu'u 'Ualaka'a Lookout (Tantalus)</div><span class="tag tag-free">Free · No reservation</span></div>
+      </div>
+      <div class="card-body">Hidden local gem at 1,000 ft. 180° panorama over Honolulu, Diamond Head, and Pearl Harbor. Stunning at sunset. 15-min drive from Waikiki.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Manoa Falls Hike</div><span class="tag tag-free">No reservation · $7 parking</span></div>
+      </div>
+      <div class="card-body">Easy 1.6-mile hike through lush rainforest to a 150-ft waterfall. Muddy — wear shoes you can get dirty.</div>
+    </div>
+
+    <div class="section-title">🍽️ Food (Vegetarian-Friendly)</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Hau Tree Restaurant — Kaimana Beach Hotel</div><span class="tag tag-veg">Veg-friendly</span></div>
+      </div>
+      <div class="card-body">Beachfront at 2863 Kalakaua Ave. Stunning sunset views. Known for ube piña colada. Great for a special O'ahu dinner.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Peace Café</div><span class="tag tag-veg">Fully Veg/Vegan</span></div>
+      </div>
+      <div class="card-body">Waikiki's best veg/vegan spot. Simple, solid, affordable. Good for a casual lunch or dinner.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Leonard's Bakery</div></div>
+      </div>
+      <div class="card-body">Iconic malasadas (Portuguese donuts) — get them hot. Cash preferred. ~$2 each. A Honolulu institution.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Liliha Bakery</div></div>
+      </div>
+      <div class="card-body">Local institution famous for cocoa puffs (cream-filled choux pastry). 24-hr location on N Kuakini St.</div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TAB: MAUI
+  ══════════════════════════════════════ -->
+  <div class="section" id="tab-maui">
+
+    <div class="info-banner">
+      <strong>Maui · Aug 31–Sep 4 · 4 nights</strong>
+      Fly HNL→OGG morning Aug 31. Staying at Andaz Maui, Wailea. Pick up rental car at OGG.
+    </div>
+
+    <div class="section-title">🎫 Needs Reservation</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Haleakalā Sunrise</div><span class="tag tag-res">60-day window — Jul 4 @ 1 PM Columbus</span></div>
+      </div>
+      <div class="card-body">
+        Above-the-clouds at 10,023 ft. One of the most surreal experiences in Hawaii. 40–50°F at summit — jacket, gloves, hat required. Arrive 30+ min before sunrise. After sunrise, stay for the Sliding Sands Trail crater hike (2–4 hrs extra).<br>
+        <a href="https://recreation.gov" target="_blank">recreation.gov</a> · $1 + $30/vehicle
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Wai'anapanapa Black Sand Beach</div><span class="tag tag-res">30-day window — Aug 1 @ 1 PM Columbus</span></div>
+      </div>
+      <div class="card-body">
+        Jet-black volcanic sand, sea caves, lava arches. One of Maui's most photogenic spots. Book the 7 AM slot for best dramatic light and fewest people.<br>
+        <a href="https://gostateparks.hawaii.gov" target="_blank">gostateparks.hawaii.gov</a> · $5/person + $10/vehicle
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Molokini Crater Snorkel</div><span class="tag tag-res">Book ASAP — fills weeks ahead</span></div>
+      </div>
+      <div class="card-body">
+        Submerged volcanic crater 3 miles offshore. 150-ft visibility, 250+ fish species. One of the world's top snorkel sites. Half-day catamaran departing Maalaea Harbor ~7 AM. Pack a light jacket for the ocean breeze.<br>
+        <strong>Trilogy Excursions</strong> (premium, smaller boats): <a href="https://sailtrilogy.com" target="_blank">sailtrilogy.com</a><br>
+        <strong>Pride of Maui</strong> (larger, good value): <a href="https://www.prideofmaui.com" target="_blank">prideofmaui.com</a> · ~$120–150/person
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Mama's Fish House</div><span class="tag tag-res">Book months ahead — NOW</span><span class="tag tag-veg">Ask about veg options</span></div>
+      </div>
+      <div class="card-body">
+        Legendary — consistently ranked Hawaii's best restaurant. Intimate, ocean-view setting in Paia. Very limited tables.<br>
+        <a href="https://www.mamasfishhouse.com" target="_blank">mamasfishhouse.com</a> · ~$80–120/person
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">⏳</span>
+        <div><div class="card-title">Iao Valley State Park</div><span class="tag tag-res">30-day window — Aug 1 (IF reopened)</span></div>
+      </div>
+      <div class="card-body">
+        Sacred Hawaiian valley, iconic Iao Needle rock formation. <strong>Currently CLOSED</strong> — monitor for 2026 reopening.<br>
+        <a href="https://gostateparks.hawaii.gov" target="_blank">gostateparks.hawaii.gov</a> · $5/person + $10/vehicle
+      </div>
+    </div>
+
+    <div class="section-title">🐠 Beaches & Snorkelling</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Makena Beach (Big Beach)</div><span class="tag tag-free">No reservation · Free</span></div>
+      </div>
+      <div class="card-body">3,000 ft of golden sand, crystal-clear water. One of Maui's largest and most beautiful beaches. Powerful shore break — don't turn your back on the waves.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Kapalua Beach</div><span class="tag tag-free">No reservation · Free</span></div>
+      </div>
+      <div class="card-body">Protected northwest Maui cove. Calm, beautiful, good snorkelling near rocky edges. Turtle sightings very common. Quieter than south Maui.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Honolua Bay</div><span class="tag tag-free">No reservation · No facilities</span></div>
+      </div>
+      <div class="card-body">Raw and rugged. Outstanding coral reef — one of Maui's best snorkel spots. Accessed via a short dirt trail. Bring everything you need.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Keawakapu Beach (Kihei)</div><span class="tag tag-free">No reservation · Free</span></div>
+      </div>
+      <div class="card-body">Soft sand, calm clear water, minimal crowds. 20-min drive from Andaz. Great for morning walks and easy snorkelling near rocky outcrops.</div>
+    </div>
+
+    <div class="section-title">🌿 Landmarks & Nature</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Road to Hāna (Hwy 360)</div></div>
+      </div>
+      <div class="card-body">All-day drive: 64 miles, 620 curves, 59 bridges. <strong>Leave Andaz by 6:30–7 AM</strong> to stay ahead of traffic. Stops: Wailua Falls, Aunty Sandy's banana bread, Wai'anapanapa, Hana town. Consider the full loop back via Ulupalakua to avoid backtracking.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Wailua Falls</div><span class="tag tag-free">No reservation · Roadside stop</span></div>
+      </div>
+      <div class="card-body">Stunning 80-ft twin falls. Easy roadside stop on Road to Hana — no hike required.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Ho'okipa Beach Park</div><span class="tag tag-free">No reservation · Free</span></div>
+      </div>
+      <div class="card-body">World-famous windsurfing beach. 40+ green sea turtles haul out on the beach in the evening (after ~3 PM). Perfect stop when visiting Paia.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Nakalele Blowhole</div></div>
+      </div>
+      <div class="card-body">Volcanic blowhole shooting water 50+ ft. Dramatic north Maui coastal scenery. Moderate 20-min hike. Don't get too close — sneaker waves are dangerous.</div>
+    </div>
+
+    <div class="section-title">🍽️ Food (Vegetarian-Friendly)</div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Café Mambo — Paia Town</div><span class="tag tag-veg">Veg-friendly</span></div>
+      </div>
+      <div class="card-body">Casual, eclectic menu in charming hippie surf town. No reservation needed. Great casual stop.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Flatbread Company — Paia</div><span class="tag tag-veg">Veg-friendly</span></div>
+      </div>
+      <div class="card-body">Wood-fired pizza, great vegetarian options. Paia combo: Flatbread for lunch, Mama's for dinner.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Nuka Restaurant — Hana</div><span class="tag tag-veg">Veg options</span></div>
+      </div>
+      <div class="card-body">Best restaurant in Hana for a Road to Hana lunch. Reservation recommended. Scenic location.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Aunty Sandy's Banana Bread — Hana Hwy</div></div>
+      </div>
+      <div class="card-body">The famous Maui institution near mile marker 18. Get it warm from the foil. A must on Road to Hana.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Tin Roof — Kahului</div></div>
+      </div>
+      <div class="card-body">Chef Sheldon Simeon's casual local favourite near OGG airport. Great last-meal option before departure flight.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="status-icon">🔲</span>
+        <div><div class="card-title">Ka'ana Kitchen — Andaz Wailea</div><span class="tag tag-veg">Veg-friendly</span></div>
+      </div>
+      <div class="card-body">Andaz's own farm-to-table restaurant. Breakfast included with FHR. Worth trying for one dinner too.</div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TAB: ITINERARY
+  ══════════════════════════════════════ -->
+  <div class="section" id="tab-itinerary">
+
+    <div class="info-banner">
+      Loose skeleton — adjust after bookings are confirmed. Don't over-schedule Maui; the island rewards slow mornings.
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">1</div><div class="day-date">Aug 27<br>Thu</div></div>
+      <div class="day-body"><div class="day-island">✈️ Travel Day</div><div class="day-title">CMH → SEA → HNL</div><div class="day-desc">Depart Columbus 5:35 PM. 74-min SEA layover. Arrive Honolulu ~midnight. Check in Royal Hawaiian.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">2</div><div class="day-date">Aug 28<br>Fri</div></div>
+      <div class="day-body"><div class="day-island">🌺 O'ahu</div><div class="day-title">Easy arrival day</div><div class="day-desc">Rest morning after late arrival. Afternoon: Waikiki Beach walk, explore Ala Moana. Leonard's Bakery for malasadas.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">3</div><div class="day-date">Aug 29<br>Sat</div></div>
+      <div class="day-body"><div class="day-island">🌺 O'ahu</div><div class="day-title">Pearl Harbor + Sunset Lookout</div><div class="day-desc">Pearl Harbor morning (3–4 hrs). Afternoon: Pu'u 'Ualaka'a Lookout for sunset panorama.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">4</div><div class="day-date">Aug 30<br>Sun</div></div>
+      <div class="day-body"><div class="day-island">🌺 O'ahu</div><div class="day-title">Hanauma Bay + Diamond Head</div><div class="day-desc">Early morning: Hanauma Bay snorkel. Afternoon: Diamond Head hike (or split over two days based on energy).</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">5</div><div class="day-date">Aug 31<br>Mon</div></div>
+      <div class="day-body"><div class="day-island">🌺 O'ahu → 🌋 Maui</div><div class="day-title">Island hop day</div><div class="day-desc">Morning: Iolani Palace or Bishop Museum. Afternoon: fly HNL→OGG. Pick up rental car. Andaz Maui check-in.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">6</div><div class="day-date">Sep 1<br>Tue</div></div>
+      <div class="day-body"><div class="day-island">🌋 Maui</div><div class="day-title">Molokini + Black Sand Beach</div><div class="day-desc">Early morning: Molokini Crater snorkel catamaran (depart Maalaea ~7 AM). Afternoon: Wai'anapanapa Black Sand Beach.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">7</div><div class="day-date">Sep 2<br>Wed</div></div>
+      <div class="day-body"><div class="day-island">🌋 Maui</div><div class="day-title">Road to Hāna — Full Day</div><div class="day-desc">Leave Andaz by 6:30 AM. Wailua Falls, Aunty Sandy's banana bread, Wai'anapanapa, Hana town. Consider full loop return via Ulupalakua.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">8</div><div class="day-date">Sep 3<br>Thu</div></div>
+      <div class="day-body"><div class="day-island">🌋 Maui</div><div class="day-title">🌅 Haleakalā Sunrise + Mama's Dinner</div><div class="day-desc">3 AM wake-up for Haleakalā summit sunrise. Stay for Sliding Sands Trail crater hike. Rest afternoon. Mama's Fish House dinner.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">9</div><div class="day-date">Sep 4<br>Fri</div></div>
+      <div class="day-body"><div class="day-island">🌋 Maui → ✈️ Travel</div><div class="day-title">Beach morning → Departure</div><div class="day-desc">Morning: Makena Beach or Kapalua. Tin Roof lunch near OGG. Depart Maui 9:20 PM.</div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-label"><div class="day-num">10</div><div class="day-date">Sep 5<br>Sat</div></div>
+      <div class="day-body"><div class="day-island">✈️ Travel Day</div><div class="day-title">SEA → CMH</div><div class="day-desc">Seattle layover 59 min. Arrive Columbus 4:37 PM.</div></div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TAB: LOGISTICS
+  ══════════════════════════════════════ -->
+  <div class="section" id="tab-logistics">
+
+    <div class="section-title">✈️ Flights</div>
+
+    <div class="flight-card">
+      <div class="flight-row"><div class="flight-num">AS 450</div><div class="flight-route">CMH → SEA<div class="flight-time">Thu Aug 27 · 5:35 PM → 7:38 PM</div></div><div class="flight-note">74-min layover — stay near gate</div></div>
+      <div class="flight-row"><div class="flight-num">AS 901</div><div class="flight-route">SEA → HNL<div class="flight-time">Thu Aug 27 · 8:52 PM → 11:59 PM HST</div></div><div class="flight-note">Arrive late night</div></div>
+      <div class="flight-row alert-row"><div class="flight-num" style="color:var(--coral)">⚠️ BOOK</div><div class="flight-route">HNL → OGG (Maui)<div class="flight-time">Aug 31 · Time TBD · ~35 min flight</div></div><div class="flight-note">NOT on Alaska ticket! ~$60–90</div></div>
+      <div class="flight-row"><div class="flight-num">AS 122</div><div class="flight-route">OGG → SEA<div class="flight-time">Fri Sep 4 · 9:20 PM → Sat 6:11 AM</div></div><div class="flight-note">Via HNL</div></div>
+      <div class="flight-row"><div class="flight-num">AS 450</div><div class="flight-route">SEA → CMH<div class="flight-time">Sat Sep 5 · 9:10 AM → 4:37 PM</div></div><div class="flight-note">59-min layover</div></div>
+    </div>
+
+    <div class="section-title">🏨 Hotels (Amex FHR)</div>
+
+    <div class="hotel-card">
+      <div class="hotel-name">The Royal Hawaiian, Luxury Collection</div>
+      <div class="hotel-dates">O'ahu · Aug 27–31 · 4 nights · Waikiki</div>
+      <div class="hotel-perks">
+        <div class="hotel-perk"><span class="perk-icon">💳</span> $100 property credit</div>
+        <div class="hotel-perk"><span class="perk-icon">🥐</span> Breakfast for 2 daily (included)</div>
+        <div class="hotel-perk"><span class="perk-icon">⬆️</span> Room upgrade (subject to availability)</div>
+        <div class="hotel-perk"><span class="perk-icon">🕓</span> 4 PM late checkout</div>
+        <div class="hotel-perk"><span class="perk-icon">⚠️</span> Arriving ~1 AM Aug 28 — email hotel to confirm late-night hold</div>
+      </div>
+    </div>
+
+    <div class="hotel-card" style="border-color:#fbbf24;">
+      <div class="hotel-name">⭐ Andaz Maui at Wailea Resort</div>
+      <div class="hotel-dates">Maui · Aug 31–Sep 4 · 4 nights · Wailea</div>
+      <div class="hotel-perks">
+        <div class="hotel-perk"><span class="perk-icon">💳</span> <strong>$750 property credit</strong> — expires Jun 30, book NOW</div>
+        <div class="hotel-perk"><span class="perk-icon">🥐</span> Breakfast for 2 daily (included)</div>
+        <div class="hotel-perk"><span class="perk-icon">⬆️</span> Room upgrade (subject to availability)</div>
+        <div class="hotel-perk"><span class="perk-icon">🕓</span> 4 PM late checkout</div>
+      </div>
+    </div>
+
+    <div class="info-banner">
+      <strong>💳 Amex credit strategy</strong>
+      Book Andaz Maui NOW (Jan–Jun $300 statement credit + $750 property credit before Jun 30 deadline) · Book Royal Hawaiian after Jul 1 (Jul–Dec $300 statement credit) · Total value: $600 statement + $850 property + ~$480 breakfast = <strong>~$1,930</strong>
+    </div>
+
+    <div class="section-title">🚗 Rental Car — Maui</div>
+
+    <div class="card">
+      <div class="card-body">
+        Pick up at OGG on Aug 31 arrival. <strong>Book NOW</strong> — Maui cars sell out in summer. Budget/Alamo/National tend to have best rates.<br><br>
+        Get a <strong>standard SUV</strong> (not economy) — roads to Haleakalā and parts of the Hana Hwy benefit from extra clearance. Most rental agreements <strong>prohibit driving Pi'ilani Hwy 31</strong> (back road of Hana) — check your policy before that loop.<br><br>
+        Rental car is <strong>not needed on O'ahu</strong> — Waikiki is walkable; Uber/Lyft fine for Pearl Harbor, Hanauma Bay, etc.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TAB: TIPS
+  ══════════════════════════════════════ -->
+  <div class="section" id="tab-tips">
+
+    <div class="section-title">🕐 Timezone</div>
+    <div class="tip-card">
+      <strong>HST is always UTC−10 (no daylight saving)</strong>
+      Columbus (EDT) in August = UTC−4. So HST = Columbus − 6 hours. A 7 AM HST booking window opens at <strong>1 PM Columbus time</strong>. Set alarms 10 min early.
+    </div>
+
+    <div class="section-title">🥗 Vegetarian Tips</div>
+    <div class="tip-card green">
+      <strong>Best veg hubs</strong>
+      <strong>O'ahu:</strong> Downtown Honolulu and Ala Moana area — many Japanese, Indian, health-food options. Avoid tourist traps on Kalakaua Ave (Waikiki main strip) — walk one block inland for better food and lower prices.<br><br>
+      <strong>Maui:</strong> Paia Town (North Shore) is the jackpot — Café Mambo, Flatbread Co., and Mana Foods grocery. Stock up for Road to Hana here.
+    </div>
+
+    <div class="section-title">💵 Money</div>
+    <div class="tip-card coral">
+      <strong>Carry cash ($100–150 in small bills)</strong>
+      Essential for: roadside banana bread stands, shave ice carts, beach parking, tips. Most major spots accept cards but cash wins at local roadside stops.
+    </div>
+    <div class="tip-card">
+      <strong>Costco saves serious money</strong>
+      <strong>Costco Iwilei (Honolulu, near airport):</strong> Snorkel gear (~$25), sunscreen, snacks on arrival day.<br>
+      <strong>Costco Maui (Kahului, near OGG):</strong> Water, snacks, sunscreen — resort prices are brutal.
+    </div>
+    <div class="tip-card">
+      <strong>Souvenirs — buy at the grocery store</strong>
+      Kona coffee, macadamia nuts, Maui Brewing Co. drinks — Costco or Safeway/Foodland have the same items 40% cheaper than resort gift shops.
+    </div>
+
+    <div class="section-title">🎒 Packing Essentials</div>
+    <div class="tip-card">
+      <strong>🧥 Haleakalā summit — it's cold up there</strong>
+      40–50°F at sunrise. Bring a proper jacket, gloves, and warm layers. Non-negotiable — don't let the 80°F beach weather fool you.
+    </div>
+    <div class="tip-card">
+      <strong>☀️ Sun protection</strong>
+      Reef-safe mineral sunscreen only — required by law at Hanauma Bay. Hawaii's sun is more intense than the mainland. Add a rashguard for snorkelling.
+    </div>
+    <div class="tip-card">
+      <strong>👟 Footwear</strong>
+      Water shoes for lava rocks (Wai'anapanapa), hiking shoes for Diamond Head &amp; Haleakalā, flip-flops for beach. Three pairs covers everything.
+    </div>
+
+    <div class="section-title">📱 Practical</div>
+    <div class="tip-card">
+      <strong>Cell coverage on Road to Hana</strong>
+      Spotty to nonexistent once you leave Paia. Download offline Google Maps for the entire Hana Hwy before you leave Wailea in the morning.
+    </div>
+    <div class="tip-card coral">
+      <strong>Amex FHR phone tip</strong>
+      Call 1-800-297-2977 (the FHR dedicated line) rather than booking online — agents can sometimes secure better room categories and flag unadvertised upgrades.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="last-updated content">Last updated: May 2026 · Built with Claude for Priyank &amp; Saloni 🌺</div>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+</script>
+</body>
+</html>
