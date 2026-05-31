@@ -1,6 +1,11 @@
 // ============================================================
 // HAWAII TRIP 2026 — DATA FILE
 // Edit this file to update the website. HTML renders from here.
+//
+// Place item fields:
+//   status   : "pending" | "confirmed" | "watching" | "ruled-out"
+//   tag.style: "res" (yellow/warning) | "free" (green) | "tip" (blue) | "veg" (warm yellow)
+//   photo    : optional Unsplash URL — omit the field entirely if no photo
 // ============================================================
 
 const TRIP_DATA = {
@@ -11,7 +16,7 @@ const TRIP_DATA = {
     dates: "Aug 27 – Sep 4, 2026",
     oahu: "O'ahu: Aug 27–31",
     maui: "Maui: Aug 31–Sep 4",
-    lastUpdated: "May 2026"
+    lastUpdated: "May 2026"  // update this when making changes
   },
 
   timezone: "HST = Columbus (EDT) − 6 hrs in summer. A 7 AM HST booking window = <strong>1 PM Columbus time.</strong> Set alarms 10 min early — these sell out in seconds.",

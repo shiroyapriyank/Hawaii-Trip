@@ -134,6 +134,7 @@
     .card-photo {
       height: 155px;
       background-color: var(--ocean-light);
+      background-image: linear-gradient(135deg, #caf0f8 0%, #90e0ef 100%);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -281,7 +282,7 @@ function esc(s) {
 
 function renderTags(item) {
   if (!item.tags || !item.tags.length) return '';
-  const html = item.tags.map(t => `<span class="tag tag-${t.style}">${t.label}</span>`).join('');
+  const html = item.tags.map(t => `<span class="tag tag-${esc(t.style)}">${esc(t.label)}</span>`).join('');
   return `<div class="tags">${html}</div>`;
 }
 
@@ -289,10 +290,10 @@ function renderCard(item) {
   const dots = { pending: 'dot-pending', confirmed: 'dot-confirmed', watching: 'dot-watching', 'ruled-out': 'dot-ruled-out' };
   const dot = dots[item.status] || 'dot-pending';
   const photoHtml = item.photo
-    ? `<div class="card-photo" style="background-image:url('${item.photo}')"></div>`
+    ? `<div class="card-photo" style="background-image:url('${esc(item.photo)}')"></div>`
     : '';
   const linkHtml = item.url
-    ? `<a class="card-link" href="${item.url}" target="_blank" rel="noopener">${item.urlLabel || item.url}</a>`
+    ? `<a class="card-link" href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.urlLabel || item.url)}</a>`
     : '';
   return `
     <div class="card">
@@ -300,10 +301,10 @@ function renderCard(item) {
       <div class="card-inner">
         <div class="card-top">
           <div class="status-dot ${dot}"></div>
-          <div class="card-title">${item.title}</div>
+          <div class="card-title">${esc(item.title)}</div>
         </div>
         ${renderTags(item)}
-        <div class="card-body">${item.body}</div>
+        <div class="card-body">${esc(item.body)}</div>
         ${linkHtml}
       </div>
     </div>`;
@@ -330,8 +331,8 @@ function renderBookings() {
       ${d.urgent.map(u => `
         <div class="urgent-row">
           <div>
-            <div class="urgent-what">${u.what}</div>
-            <div class="urgent-note"><a href="${u.url}" target="_blank" rel="noopener">${u.urlLabel}</a> · ${u.note}</div>
+            <div class="urgent-what">${esc(u.what)}</div>
+            <div class="urgent-note"><a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.urlLabel)}</a> · ${esc(u.note)}</div>
           </div>
           <div class="badge-asap">ASAP</div>
         </div>`).join('')}
@@ -341,10 +342,10 @@ function renderBookings() {
       ${d.timed.map(b => `
         <div class="booking-row">
           <div>
-            <div class="booking-what">${b.what}</div>
-            <div class="booking-detail"><a href="${b.url}" target="_blank" rel="noopener">${b.urlLabel}</a> — ${b.detail}</div>
+            <div class="booking-what">${esc(b.what)}</div>
+            <div class="booking-detail"><a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.urlLabel)}</a> — ${esc(b.detail)}</div>
           </div>
-          <div class="badge-when ${b.urgency}">${b.when}</div>
+          <div class="badge-when ${esc(b.urgency)}">${esc(b.when)}</div>
         </div>`).join('')}
     </div>`;
 }
@@ -368,13 +369,13 @@ function renderPlan() {
     days.map(d => `
       <div class="day-card">
         <div class="day-num-box">
-          <div class="day-num">${d.day}</div>
-          <div class="day-date">${d.date}<br>${d.dow}</div>
+          <div class="day-num">${esc(d.day)}</div>
+          <div class="day-date">${esc(d.date)}<br>${esc(d.dow)}</div>
         </div>
         <div>
           <div class="day-island">${d.island}</div>
-          <div class="day-title">${d.title}</div>
-          <div class="day-desc">${d.desc}</div>
+          <div class="day-title">${esc(d.title)}</div>
+          <div class="day-desc">${esc(d.desc)}</div>
         </div>
       </div>`).join('');
 }
@@ -386,21 +387,21 @@ function renderLogistics() {
     <div class="flight-list">
       ${d.flights.map(f => `
         <div class="flight-row ${f.alert ? 'alert' : ''}">
-          <div class="flight-num">${f.num}</div>
+          <div class="flight-num">${esc(f.num)}</div>
           <div>
-            <div class="flight-route">${f.route}</div>
-            <div class="flight-time">${f.time}</div>
+            <div class="flight-route">${esc(f.route)}</div>
+            <div class="flight-time">${esc(f.time)}</div>
           </div>
-          <div class="flight-note">${f.note}</div>
+          <div class="flight-note">${esc(f.note)}</div>
         </div>`).join('')}
     </div>
 
     <div class="sec-title">🏨 Hotels — Amex Fine Hotels & Resorts</div>
     ${d.hotels.map(h => `
       <div class="hotel-card ${h.star ? 'star' : ''}">
-        <div class="hotel-name">${h.name}</div>
-        <div class="hotel-meta">${h.island} · ${h.dates} · ${h.nightly}/night</div>
-        <div class="hotel-perks">${h.perks.map(p => `<div>${p}</div>`).join('')}</div>
+        <div class="hotel-name">${esc(h.name)}</div>
+        <div class="hotel-meta">${esc(h.island)} · ${esc(h.dates)} · ${esc(h.nightly)}/night</div>
+        <div class="hotel-perks">${h.perks.map(p => `<div>${esc(p)}</div>`).join('')}</div>
       </div>`).join('')}
     <div class="amex-box">
       <div class="amex-label">💳 Amex Credit Strategy</div>
@@ -419,11 +420,11 @@ function renderTips() {
   const tips = TRIP_DATA.tips;
   const sections = [...new Set(tips.map(t => t.section))];
   document.getElementById('tab-tips').innerHTML = sections.map(sec => `
-    <div class="sec-title">— ${sec}</div>
+    <div class="sec-title">— ${esc(sec)}</div>
     ${tips.filter(t => t.section === sec).map(t => `
-      <div class="tip-card ${t.color}">
-        <div class="tip-head">${t.icon} ${t.title}</div>
-        <div class="tip-body">${t.body}</div>
+      <div class="tip-card ${esc(t.color)}">
+        <div class="tip-head">${t.icon} ${esc(t.title)}</div>
+        <div class="tip-body">${esc(t.body)}</div>
       </div>`).join('')}
   `).join('');
 }
