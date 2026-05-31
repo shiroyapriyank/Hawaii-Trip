@@ -6,6 +6,12 @@
 //   status   : "pending" | "confirmed" | "watching" | "ruled-out"
 //   tag.style: "res" (yellow/warning) | "free" (green) | "tip" (blue) | "veg" (warm yellow)
 //   photo    : optional Unsplash URL — omit the field entirely if no photo
+//
+// Schedule stop fields:
+//   name     : display name of the stop
+//   duration : estimated time as a string, e.g. "2–3 hrs"
+//   note     : optional short tip or context
+//   maps     : Google Maps URL for this specific place
 // ============================================================
 
 const TRIP_DATA = {
@@ -36,7 +42,7 @@ const TRIP_DATA = {
       { what: "🖤 Wai'anapanapa Black Sand Beach (Sep 1)", detail: "$5/person + $10/vehicle · 30-day window.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
       { what: "🌿 Iao Valley (if reopened)", detail: "Currently CLOSED — monitor site. $5/person + $10/vehicle.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
       { what: "💎 Diamond Head Crater (Sep 3)", detail: "$5/person + $10/vehicle · Book 7–8 AM slot.", url: "https://gostateparks.hawaii.gov/diamondhead/about", urlLabel: "gostateparks.hawaii.gov", when: "Aug 2 · 1 PM EDT", urgency: "soon" },
-      { what: "🐠 Hanauma Bay (Aug 28)", detail: "$65/person · 2-day window. Closed Mon & Tue.", url: "https://hbay.robertshawaii.com/products/ed8ce1a1-fce7-5c8c-8f83-350366a8605d?lng=en-US", urlLabel: "hbay.robertshawaii.com · Honolulu Parks & Rec", when: "Aug 26 · 1 PM EDT", urgency: "soon" }
+      { what: "🐠 Hanauma Bay (July 28)", detail: "$65/person · 30-day window. Closed Mon & Tue.", url: "https://hbay.robertshawaii.com/products/ed8ce1a1-fce7-5c8c-8f83-350366a8605d?lng=en-US", urlLabel: "hbay.robertshawaii.com · Honolulu Parks & Rec", when: "Aug 26 · 1 PM EDT", urgency: "soon" }
     ]
   },
 
@@ -379,5 +385,116 @@ const TRIP_DATA = {
     { section: "Practical", icon: "💳", color: "coral",
       title: "Amex FHR phone tip",
       body: "Call 1-800-297-2977 (the FHR dedicated line) rather than booking online — agents can sometimes secure better room categories and flag unadvertised upgrades." }
+  ],
+
+  // ── SCHEDULE ──────────────────────────────────────────────
+  // Day-by-day breakdown with stops, durations, and Google Maps links.
+  // Edit stops[], duration, and note to tune the plan.
+  schedule: [
+    {
+      day: 1, date: "Aug 27", dow: "Thu", island: "✈️ Travel",
+      title: "CMH → SEA → HNL",
+      stops: [
+        { name: "Columbus Airport (CMH) — Depart 5:35 PM", duration: "—", maps: "https://maps.google.com/?q=John+Glenn+Columbus+International+Airport" },
+        { name: "Seattle–Tacoma Airport (SEA) — 74-min layover", duration: "1.25 hrs", maps: "https://maps.google.com/?q=Seattle-Tacoma+International+Airport" },
+        { name: "Honolulu Airport (HNL) — Arrive ~midnight", duration: "—", maps: "https://maps.google.com/?q=Daniel+K.+Inouye+International+Airport" },
+        { name: "The Royal Hawaiian — Check in", duration: "—", maps: "https://maps.google.com/?q=The+Royal+Hawaiian+Waikiki" }
+      ]
+    },
+    {
+      day: 2, date: "Aug 28", dow: "Fri", island: "🌺 O'ahu",
+      title: "Easy Arrival Day",
+      stops: [
+        { name: "The Royal Hawaiian — Amex breakfast", duration: "1 hr", note: "Included with FHR — eat before exploring", maps: "https://maps.google.com/?q=The+Royal+Hawaiian+Waikiki" },
+        { name: "Waikiki Beach / Kuhio Beach", duration: "2–3 hrs", note: "Walk the strip, wade in, settle in to island time", maps: "https://maps.google.com/?q=Kuhio+Beach+Park+Waikiki+Honolulu" },
+        { name: "Ala Moana Center & Beach Park", duration: "1.5–2 hrs", note: "Large open-air mall + locals' beach right next door", maps: "https://maps.google.com/?q=Ala+Moana+Beach+Park+Honolulu" },
+        { name: "Leonard's Bakery — Malasadas", duration: "20 min", note: "Get them hot. Non-negotiable first-day treat", maps: "https://maps.google.com/?q=Leonard%27s+Bakery+Honolulu" }
+      ]
+    },
+    {
+      day: 3, date: "Aug 29", dow: "Sat", island: "🌺 O'ahu",
+      title: "Pearl Harbor + KCC Farmers Market + Sunset Lookout",
+      stops: [
+        { name: "KCC Farmers Market (near Diamond Head)", duration: "1 hr", note: "Sat 7:30–11 AM — arrive early for best selection", maps: "https://maps.google.com/?q=KCC+Farmers+Market+Honolulu" },
+        { name: "Pearl Harbor / USS Arizona Memorial", duration: "3–4 hrs", note: "Book ahead — standby line is 2–3 hrs. Arrive at timed entry slot", maps: "https://maps.google.com/?q=Pearl+Harbor+National+Memorial+Hawaii" },
+        { name: "USS Bowfin Submarine (optional add-on)", duration: "1 hr", note: "$27/person — right next door, great complement", maps: "https://maps.google.com/?q=USS+Bowfin+Submarine+Museum+Pearl+Harbor" },
+        { name: "Pu'u 'Ualaka'a Lookout (Tantalus)", duration: "45 min", note: "Hidden gem — 180° panorama at sunset, 15-min drive from Waikiki", maps: "https://maps.google.com/?q=Pu%27u+Ualaka%27a+State+Wayside+Honolulu" }
+      ]
+    },
+    {
+      day: 4, date: "Aug 30", dow: "Sun", island: "🌺 O'ahu",
+      title: "Hanauma Bay + Diamond Head Hike",
+      stops: [
+        { name: "Hanauma Bay Snorkel", duration: "3–4 hrs", note: "Tickets drop 7 AM HST (1 PM EDT day prior) — book 2 days ahead. Arrive at your timed entry slot early", maps: "https://maps.google.com/?q=Hanauma+Bay+Nature+Preserve+Hawaii" },
+        { name: "Lunch — Peace Café or Tane Vegan Izakaya", duration: "1 hr", note: "Both fully veg-friendly, near Waikiki", maps: "https://maps.google.com/?q=Peace+Cafe+Honolulu" },
+        { name: "Diamond Head Crater Hike", duration: "1.5–2 hrs", note: "Book 7–8 AM slot for cooler temps; if snorkel + hike in same day, hike the afternoon slot", maps: "https://maps.google.com/?q=Diamond+Head+State+Monument+Honolulu" },
+        { name: "Koko Head Crater Trail (optional — sunrise swap)", duration: "1.5 hrs", note: "Skip Diamond Head and do Koko Head at sunrise instead for a more challenging hike", maps: "https://maps.google.com/?q=Koko+Head+District+Park+Honolulu" }
+      ]
+    },
+    {
+      day: 5, date: "Aug 31", dow: "Mon", island: "🌺→🌋 Island Hop",
+      title: "Iolani Palace → Fly to Maui",
+      stops: [
+        { name: "Iolani Palace", duration: "1–1.5 hrs", note: "Open Tue–Sat — check hours. ~$6–$30/person", maps: "https://maps.google.com/?q=Iolani+Palace+Honolulu" },
+        { name: "Chinatown Honolulu (optional)", duration: "1 hr", note: "Very veg-friendly — grab a quick lunch before heading to airport", maps: "https://maps.google.com/?q=Chinatown+Honolulu" },
+        { name: "Honolulu Airport HNL → OGG (inter-island)", duration: "35 min flight", note: "NOT on Alaska ticket — book separately ~$60–90. Allow 90 min at HNL", maps: "https://maps.google.com/?q=Daniel+K.+Inouye+International+Airport" },
+        { name: "Pick up rental car at OGG", duration: "30 min", note: "Book SUV NOW — Maui cars sell out in summer", maps: "https://maps.google.com/?q=Kahului+Airport+Maui" },
+        { name: "Andaz Maui at Wailea Resort — Check in", duration: "—", maps: "https://maps.google.com/?q=Andaz+Maui+at+Wailea+Resort" }
+      ]
+    },
+    {
+      day: 6, date: "Sep 1", dow: "Tue", island: "🌋 Maui",
+      title: "Molokini Snorkel + Black Sand Beach",
+      stops: [
+        { name: "Andaz breakfast (early)", duration: "30 min", note: "Eat before 6:30 AM — boat departs Mālaea ~7 AM", maps: "https://maps.google.com/?q=Andaz+Maui+at+Wailea+Resort" },
+        { name: "Molokini Crater Snorkel Catamaran", duration: "4–5 hrs", note: "Depart Mālaea Harbor ~7 AM. Bring light jacket for ocean breeze. ~$120–150/person", maps: "https://maps.google.com/?q=Maalaea+Harbor+Maui" },
+        { name: "Maui Ocean Center (optional add-on)", duration: "1.5–2 hrs", note: "Right at Mālaea Harbor — $35/person. Good if you want more sea life without re-entering water", maps: "https://maps.google.com/?q=Maui+Ocean+Center+Maalaea" },
+        { name: "Wai'anapanapa Black Sand Beach", duration: "1.5–2 hrs", note: "Book 30 days ahead (Aug 1 @ 1 PM EDT). Get the 7 AM slot for dramatic light — if touring after Molokini, afternoon slot is fine", maps: "https://maps.google.com/?q=Waianapanapa+State+Park+Maui" },
+        { name: "Paia Town — Dinner", duration: "1–1.5 hrs", note: "Café des Amis, Flatbread Co., or Café Mambo — all veg-friendly", maps: "https://maps.google.com/?q=Paia+Town+Maui" }
+      ]
+    },
+    {
+      day: 7, date: "Sep 2", dow: "Wed", island: "🌋 Maui",
+      title: "Road to Hāna — Full Day",
+      stops: [
+        { name: "Paia Town — Fuel up (Choice Health Bar or Café des Amis)", duration: "30 min", note: "Leave Andaz by 6:30 AM. Stock up on snacks/water for the road", maps: "https://maps.google.com/?q=Paia+Town+Maui" },
+        { name: "Twin Falls (Mile ~2, Hana Hwy)", duration: "45 min", note: "First waterfall stop — two cascades, swimmable pool", maps: "https://maps.google.com/?q=Twin+Falls+Maui" },
+        { name: "Wailua Falls (roadside)", duration: "15 min", note: "Stunning 80-ft twin falls — easy roadside pull-off, no hike needed", maps: "https://maps.google.com/?q=Wailua+Falls+Maui" },
+        { name: "Pua'a Ka'a State Wayside (Mile ~22)", duration: "30 min", note: "Underrated swimmable pools — much less crowded than Twin Falls", maps: "https://maps.google.com/?q=Puaa+Kaa+State+Wayside+Park+Maui" },
+        { name: "Aunty Sandy's Banana Bread (Mile ~18)", duration: "15 min", note: "The most famous roadside stop in Hawaii — get it warm", maps: "https://maps.google.com/?q=Aunty+Sandy%27s+Banana+Bread+Maui" },
+        { name: "Hana Town", duration: "1 hr", note: "Grab lunch (Nuka Restaurant — reservation recommended)", maps: "https://maps.google.com/?q=Hana+Maui" },
+        { name: "Ohe'o Gulch / Seven Sacred Pools", duration: "1 hr", note: "Same $30 NP vehicle pass. Check swimming conditions at Kipahulu Visitor Center", maps: "https://maps.google.com/?q=Ohe%27o+Gulch+Kipahulu+Maui" },
+        { name: "Pipiwai Trail (Bamboo Forest → Waimoku Falls)", duration: "2.5–4 hrs", note: "4 mi round trip. One of Maui's best hikes — do NOT skip. Bring headlamps if finishing late", maps: "https://maps.google.com/?q=Pipiwai+Trail+Maui" }
+      ]
+    },
+    {
+      day: 8, date: "Sep 3", dow: "Thu", island: "🌋 Maui",
+      title: "🌅 Haleakalā Sunrise + Mama's Fish House",
+      stops: [
+        { name: "Wake up 2:30–3 AM · Drive to Haleakalā Summit", duration: "1.5 hrs drive", note: "Leave Andaz by 3 AM. Cold at summit (40–50°F) — jacket, gloves, layers required. Park entry gate opens at 3 AM", maps: "https://maps.google.com/?q=Haleakala+Summit+Maui" },
+        { name: "Haleakalā Sunrise at Summit (10,023 ft)", duration: "1–1.5 hrs", note: "Book 60 days ahead (Jul 4 @ 1 PM EDT). Stay for the full color show, don't rush back down", maps: "https://maps.google.com/?q=Haleakala+National+Park+Visitor+Center+Summit" },
+        { name: "Sliding Sands Trail (Crater Hike)", duration: "2–4 hrs", note: "Descend into the crater — otherworldly lunar landscape. Turn back at any comfortable distance. Altitude affects stamina", maps: "https://maps.google.com/?q=Sliding+Sands+Trail+Haleakala" },
+        { name: "Upcountry Maui / Kula (drive back)", duration: "1 hr", note: "Natural stop on the way down — cool highlands, lavender farm (Ali'i Kula), sweeping ocean views", maps: "https://maps.google.com/?q=Kula+Maui+Hawaii" },
+        { name: "Rest & beach afternoon", duration: "2 hrs", note: "Wailea Beach is walking distance from Andaz — easy recovery swim", maps: "https://maps.google.com/?q=Wailea+Beach+Maui" },
+        { name: "Mama's Fish House — Dinner", duration: "2–2.5 hrs", note: "Book months ahead. Confirm veg options when reserving. ~$80–120/person", maps: "https://maps.google.com/?q=Mama%27s+Fish+House+Paia+Maui" }
+      ]
+    },
+    {
+      day: 9, date: "Sep 4", dow: "Fri", island: "🌋→✈️ Departure",
+      title: "Beach Morning → Depart",
+      stops: [
+        { name: "Makena Beach (Big Beach) or Kapalua Beach", duration: "2–3 hrs", note: "Final morning swim. Makena = dramatic big waves. Kapalua = calm, good snorkeling", maps: "https://maps.google.com/?q=Makena+State+Park+Beach+Maui" },
+        { name: "Tin Roof — Lunch near OGG", duration: "1 hr", note: "Chef Sheldon Simeon's casual local spot — perfect farewell meal before airport", maps: "https://maps.google.com/?q=Tin+Roof+Maui+Kahului" },
+        { name: "Return rental car + Kahului Airport (OGG)", duration: "1.5 hrs", note: "Depart 9:20 PM — arrive 2–2.5 hrs early. Allow extra time for car return shuttle", maps: "https://maps.google.com/?q=Kahului+Airport+Maui" }
+      ]
+    },
+    {
+      day: 10, date: "Sep 5", dow: "Sat", island: "✈️ Travel",
+      title: "SEA → CMH · Home",
+      stops: [
+        { name: "Seattle–Tacoma Airport (SEA) — 59-min layover", duration: "59 min", note: "Tight — stay near gate", maps: "https://maps.google.com/?q=Seattle-Tacoma+International+Airport" },
+        { name: "Columbus Airport (CMH) — Arrive 4:37 PM", duration: "—", maps: "https://maps.google.com/?q=John+Glenn+Columbus+International+Airport" }
+      ]
+    }
   ]
 };

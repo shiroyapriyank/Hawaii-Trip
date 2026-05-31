@@ -239,6 +239,83 @@
     .tip-head { display: flex; align-items: center; gap: 0.4rem; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; }
     .tip-body { font-size: 0.84rem; color: #4b5563; line-height: 1.55; white-space: pre-line; }
 
+    /* ── Schedule ── */
+    .sched-day {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .sched-day-header {
+      display: flex; align-items: center; gap: 0.85rem;
+      padding: 0.85rem 1.1rem;
+      background: var(--ocean-faint);
+      border-bottom: 1px solid var(--ocean-light);
+    }
+    .sched-day-num {
+      flex-shrink: 0;
+      width: 42px; height: 42px;
+      background: var(--ocean);
+      color: white;
+      border-radius: 50%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.15rem;
+      line-height: 1;
+    }
+    .sched-day-num span { font-size: 0.55rem; font-weight: 600; opacity: 0.85; margin-top: 1px; }
+    .sched-day-travel .sched-day-num { background: var(--muted); }
+    .sched-day-hop .sched-day-num { background: var(--coral); }
+    .sched-day-maui .sched-day-num { background: var(--green); }
+    .sched-day-meta { flex: 1; }
+    .sched-day-island { font-size: 0.7rem; font-weight: 700; color: var(--ocean); text-transform: uppercase; letter-spacing: 0.5px; }
+    .sched-day-travel .sched-day-island { color: var(--muted); }
+    .sched-day-hop .sched-day-island { color: var(--coral); }
+    .sched-day-maui .sched-day-island { color: var(--green); }
+    .sched-day-title { font-weight: 700; font-size: 0.92rem; margin-top: 0.05rem; }
+    .sched-stops { padding: 0.3rem 0; }
+    .sched-stop {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      align-items: start;
+      padding: 0.6rem 1.1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .sched-stop:last-child { border-bottom: none; }
+    .sched-stop-left { display: flex; align-items: flex-start; gap: 0.6rem; }
+    .sched-stop-dot {
+      flex-shrink: 0; margin-top: 4px;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--ocean-light);
+      border: 1.5px solid var(--ocean);
+    }
+    .sched-stop-name {
+      font-size: 0.86rem; font-weight: 600; line-height: 1.35;
+    }
+    .sched-stop-name a { color: var(--text); text-decoration: none; }
+    .sched-stop-name a:hover { color: var(--ocean); text-decoration: underline; }
+    .sched-stop-note { font-size: 0.76rem; color: var(--muted); margin-top: 0.15rem; line-height: 1.4; }
+    .sched-stop-right { text-align: right; flex-shrink: 0; }
+    .sched-duration {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 600;
+      color: var(--ocean-dark);
+      background: var(--ocean-faint);
+      border: 1px solid var(--ocean-light);
+      padding: 0.15rem 0.5rem;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+    .sched-duration.dash { background: none; border-color: transparent; color: var(--muted); }
+    .sched-map-link {
+      display: block; font-size: 0.7rem; color: var(--ocean); text-decoration: none;
+      margin-top: 0.25rem; font-weight: 500;
+    }
+    .sched-map-link:hover { text-decoration: underline; }
+
     /* ── Footer ── */
     .footer { text-align: center; font-size: 0.75rem; color: var(--muted); padding: 2rem 1rem; }
   </style>
@@ -265,6 +342,7 @@
   <div class="section active" id="tab-booking"></div>
   <div class="section" id="tab-oahu"></div>
   <div class="section" id="tab-maui"></div>
+  <div class="section" id="tab-schedule"></div>
   <div class="section" id="tab-plan"></div>
   <div class="section" id="tab-logistics"></div>
   <div class="section" id="tab-tips"></div>
@@ -416,6 +494,47 @@ function renderLogistics() {
     </div>`;
 }
 
+function renderSchedule() {
+  const days = TRIP_DATA.schedule;
+  // classify day type for color theming
+  function dayClass(island) {
+    if (island.includes('Travel') && !island.includes('→')) return 'sched-day-travel';
+    if (island.includes('→')) return 'sched-day-hop';
+    if (island.includes('Maui')) return 'sched-day-maui';
+    return '';
+  }
+  document.getElementById('tab-schedule').innerHTML =
+    `<div class="info-banner">Tap any place name to open Google Maps. Durations are estimates — build in buffer time. This is a guide, not a contract.</div>` +
+    days.map(d => `
+      <div class="sched-day ${dayClass(d.island)}">
+        <div class="sched-day-header">
+          <div class="sched-day-num">${esc(d.day)}<span>${esc(d.date)}</span></div>
+          <div class="sched-day-meta">
+            <div class="sched-day-island">${esc(d.island)} · ${esc(d.dow)}</div>
+            <div class="sched-day-title">${esc(d.title)}</div>
+          </div>
+        </div>
+        <div class="sched-stops">
+          ${d.stops.map(s => `
+            <div class="sched-stop">
+              <div class="sched-stop-left">
+                <div class="sched-stop-dot"></div>
+                <div>
+                  <div class="sched-stop-name">
+                    <a href="${esc(s.maps)}" target="_blank" rel="noopener">${esc(s.name)}</a>
+                  </div>
+                  ${s.note ? `<div class="sched-stop-note">${esc(s.note)}</div>` : ''}
+                </div>
+              </div>
+              <div class="sched-stop-right">
+                <span class="sched-duration ${s.duration === '—' ? 'dash' : ''}">${esc(s.duration)}</span>
+                <a class="sched-map-link" href="${esc(s.maps)}" target="_blank" rel="noopener">📍 Maps</a>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>`).join('');
+}
+
 function renderTips() {
   const tips = TRIP_DATA.tips;
   const sections = [...new Set(tips.map(t => t.section))];
@@ -451,12 +570,13 @@ function showTab(id, btn) {
   document.getElementById('hero-maui').textContent = '🌋 ' + m.maui;
 
   const tabs = [
-    { id: 'booking',   label: '⏰ Bookings' },
-    { id: 'oahu',      label: "🌺 O'ahu"    },
-    { id: 'maui',      label: '🌋 Maui'     },
-    { id: 'plan',      label: '🗓 Plan'     },
+    { id: 'booking',   label: '⏰ Bookings'  },
+    { id: 'oahu',      label: "🌺 O'ahu"     },
+    { id: 'maui',      label: '🌋 Maui'      },
+    { id: 'schedule',  label: '📍 Schedule'  },
+    { id: 'plan',      label: '🗓 Plan'      },
     { id: 'logistics', label: '✈️ Logistics' },
-    { id: 'tips',      label: '💡 Tips'     }
+    { id: 'tips',      label: '💡 Tips'      }
   ];
   document.getElementById('tabs').innerHTML = tabs.map((t, i) =>
     `<button class="tab ${i === 0 ? 'active' : ''}" onclick="showTab('${t.id}', this)">${t.label}</button>`
@@ -465,6 +585,7 @@ function showTab(id, btn) {
   renderBookings();
   renderOahu();
   renderMaui();
+  renderSchedule();
   renderPlan();
   renderLogistics();
   renderTips();

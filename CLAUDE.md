@@ -72,13 +72,42 @@ Update status whenever the user confirms a booking or rules something out.
 
 ---
 
+## trip-data.js Data Structure
+
+The website renders entirely from `trip-data.js`. Key top-level keys:
+
+| Key | Purpose |
+| --- | ------- |
+| `meta` | Title, traveler names, dates, island splits |
+| `bookings` | Urgent + timed reservation reminders (Bookings tab) |
+| `oahu` / `maui` | Place cards by section (O'ahu / Maui tabs) |
+| `itinerary` | Loose day-by-day skeleton (Plan tab) |
+| `schedule` | Detailed day-by-day stops with durations + Maps links (Schedule tab) |
+| `logistics` | Flights, hotels, car rental (Logistics tab) |
+| `tips` | Grouped insider tips (Tips tab) |
+
+### Schedule stop fields
+
+Each `schedule[n].stops[]` entry has:
+
+- `name` — display name of the stop
+- `duration` — estimated time as a string (e.g. `"2–3 hrs"` or `"—"` for transit)
+- `note` — optional short tip (shown below the name)
+- `maps` — Google Maps URL (`https://maps.google.com/?q=...`)
+
+When adding a stop to the schedule, always include all four fields.
+
+---
+
 ## Workflow When User Adds a New Place
 
 1. Ask any clarifying questions needed (island? category? reservation details?)
 2. Add the place to the correct section in `Hawaii_Trip_2026_Places.md`
-3. If reservation required → add to the Booking Action Calendar table too
-4. Regenerate / update `index.html` to reflect the change
-5. Tell the user: "Updated the MD and the web page. Push to GitHub to go live."
+3. Add the place card to the right `oahu` or `maui` section in `trip-data.js`
+4. If reservation required → add to the `bookings` section in `trip-data.js` too
+5. If the place fits into the itinerary plan → add a stop to the relevant day in `schedule` in `trip-data.js`
+6. Update `index.html` only if new rendering logic is needed (data changes alone are picked up automatically)
+7. Tell the user: "Updated the MD and the web page. Push to GitHub to go live."
 
 ---
 
