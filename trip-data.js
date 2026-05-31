@@ -35,8 +35,8 @@ const TRIP_DATA = {
       { what: "🏨 Royal Hawaiian FHR", detail: "Book after Jul 1 to capture Jul–Dec $300 statement credit.", url: "https://travel.americanexpress.com", urlLabel: "AmexTravel.com", when: "Jul 28 · 1 PM EDT", urgency: "soon" },
       { what: "🖤 Wai'anapanapa Black Sand Beach (Sep 1)", detail: "$5/person + $10/vehicle · 30-day window.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
       { what: "🌿 Iao Valley (if reopened)", detail: "Currently CLOSED — monitor site. $5/person + $10/vehicle.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
-      { what: "💎 Diamond Head Crater (Sep 3)", detail: "$5/person + $10/vehicle · Book 7–8 AM slot.", url: "https://hawaiistateparks.reserveamerica.com", urlLabel: "reserveamerica.com", when: "Aug 2 · 1 PM EDT", urgency: "soon" },
-      { what: "🐠 Hanauma Bay (Aug 28)", detail: "$25/person · 2-day window. Closed Mon & Tue.", url: "https://dlnr.hawaii.gov/hanauma", urlLabel: "dlnr.hawaii.gov/hanauma", when: "Aug 26 · 1 PM EDT", urgency: "soon" }
+      { what: "💎 Diamond Head Crater (Sep 3)", detail: "$5/person + $10/vehicle · Book 7–8 AM slot.", url: "https://gostateparks.hawaii.gov/diamondhead/about", urlLabel: "gostateparks.hawaii.gov", when: "Aug 2 · 1 PM EDT", urgency: "soon" },
+      { what: "🐠 Hanauma Bay (Aug 28)", detail: "$25/person · 2-day window. Closed Mon & Tue.", url: "https://pros8.hnl.info/Home/Details/72", urlLabel: "pros8.hnl.info · Honolulu Parks & Rec", when: "Aug 26 · 1 PM EDT", urgency: "soon" }
     ]
   },
 
@@ -55,11 +55,12 @@ const TRIP_DATA = {
           { status: "pending", title: "Diamond Head Crater Hike",
             tags: [{ label: "Book 30 days ahead · Aug 2", style: "res" }],
             body: "1.8-mile hike, 560 ft elevation. Book 7–8 AM slot — cooler, golden light, fewer crowds. Zero shade — sunscreen, hat, water essential.",
-            url: "https://hawaiistateparks.reserveamerica.com", urlLabel: "reserveamerica.com · $5/person + $10/vehicle" },
+            url: "https://gostateparks.hawaii.gov/diamondhead/about", urlLabel: "gostateparks.hawaii.gov · $5/person + $10/vehicle",
+            photo: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&q=80&auto=format&fit=crop" },
           { status: "pending", title: "Hanauma Bay Snorkel",
             tags: [{ label: "Book 2 days ahead · Aug 26 @ 1 PM EDT", style: "res" }],
             body: "Protected volcanic crater bay — 400+ fish species. Best snorkel on O'ahu. Tickets drop at 7 AM HST sharp. Closed Mon & Tue. Arrive early.",
-            url: "https://dlnr.hawaii.gov/hanauma", urlLabel: "dlnr.hawaii.gov · $25/person",
+            url: "https://pros8.hnl.info/Home/Details/72", urlLabel: "pros8.hnl.info · $25/person",
             photo: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&auto=format&fit=crop" }
         ]
       },
@@ -75,7 +76,8 @@ const TRIP_DATA = {
             body: "Locals' favourite — calm, protected, beautiful sunset views of Diamond Head. 10-min drive from Waikiki. Better swimming than Waikiki." },
           { status: "pending", title: "Lanikai Beach (Kailua, windward side)",
             tags: [{ label: "No reservation", style: "free" }, { label: "Very limited parking", style: "tip" }],
-            body: "Many locals call it the most beautiful beach in Hawaii. Fine white sand, calm turquoise water. Arrive before 8 AM for parking. 35-min drive. Pair with Pillbox Hike." },
+            body: "Many locals call it the most beautiful beach in Hawaii. Fine white sand, calm turquoise water. Arrive before 8 AM for parking. 35-min drive. Pair with Pillbox Hike.",
+            photo: "https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80&auto=format&fit=crop" },
           { status: "pending", title: "Kailua Beach Park",
             tags: [{ label: "No reservation · Free", style: "free" }],
             body: "Long white sand beach adjacent to Lanikai. Calm, clear water. Great for kayaking and paddleboarding to the twin Mokulua Islands offshore." },
@@ -186,7 +188,7 @@ const TRIP_DATA = {
             tags: [{ label: "60-day window · Jul 4 @ 1 PM EDT", style: "res" }],
             body: "Above-the-clouds at 10,023 ft. One of the most surreal experiences in Hawaii. 40–50°F at summit — jacket, gloves, hat required. Arrive 30+ min before sunrise. Stay for Sliding Sands Trail crater hike (2–4 hrs extra).",
             url: "https://recreation.gov", urlLabel: "recreation.gov · $1 + $30/vehicle",
-            photo: "https://images.unsplash.com/photo-1527767216879-5cce6e9c0397?w=600&q=80&auto=format&fit=crop" },
+            photo: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop" },
           { status: "pending", title: "Wai'anapanapa Black Sand Beach",
             tags: [{ label: "30-day window · Aug 1 @ 1 PM EDT", style: "res" }],
             body: "Jet-black volcanic sand, sea caves, lava arches. One of Maui's most photogenic spots. Book the 7 AM slot for best dramatic light and fewest people.",
@@ -196,7 +198,7 @@ const TRIP_DATA = {
             tags: [{ label: "Book ASAP — fills weeks ahead", style: "res" }],
             body: "Submerged volcanic crater 3 miles offshore. 150-ft visibility, 250+ fish species. Half-day catamaran departing Mālaea Harbor ~7 AM. Pack a light jacket for the ocean breeze.",
             url: "https://sailtrilogy.com", urlLabel: "Trilogy or Pride of Maui · ~$120–150/person",
-            photo: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&auto=format&fit=crop" },
+            photo: "https://images.unsplash.com/photo-1542397284385-6010376c5337?w=600&q=80&auto=format&fit=crop" },
           { status: "pending", title: "Mama's Fish House",
             tags: [{ label: "Book months ahead · NOW", style: "res" }, { label: "Ask about veg options", style: "veg" }],
             body: "Legendary — consistently ranked Hawaii's best restaurant. Intimate, ocean-view setting in Paia. Very limited tables.",
@@ -212,7 +214,8 @@ const TRIP_DATA = {
         items: [
           { status: "pending", title: "Makena Beach (Big Beach)",
             tags: [{ label: "No reservation · Free", style: "free" }],
-            body: "3,000 ft of golden sand, crystal-clear water. One of Maui's largest and most beautiful beaches. Powerful shore break — don't turn your back on the waves." },
+            body: "3,000 ft of golden sand, crystal-clear water. One of Maui's largest and most beautiful beaches. Powerful shore break — don't turn your back on the waves.",
+            photo: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?w=600&q=80&auto=format&fit=crop" },
           { status: "pending", title: "Kapalua Beach",
             tags: [{ label: "No reservation · Free", style: "free" }],
             body: "Protected northwest Maui cove. Calm, beautiful, good snorkelling near rocky edges. Turtle sightings very common. Quieter than south Maui." },
