@@ -89,6 +89,10 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 - 🔲 **Hanauma Bay** — Protected volcanic crater bay, 400+ fish species. Best snorkel on Oahu. Reserve 2 days ahead. Arrive early — parking fills by 8 AM.
 - 🔲 **Waikiki Beach / Kuhio Beach** — Steps from Royal Hawaiian. Good for first morning, surfing lessons ($30–50/hr), outrigger canoe rides. Most touristy but convenient.
 - 🔲 **Ala Moana Beach Park** — Locals' beach, calm and protected. 10-min drive from Waikiki. Better swimming than Waikiki, beautiful sunset views. Free.
+- 🔲 **Lanikai Beach (Kailua, windward side)** — Many locals call it the most beautiful beach in Hawaii. Fine white sand, calm turquoise water, picture-perfect. Very limited street parking — arrive before 8 AM. 35-min drive. Pair with Pillbox Hike and Kailua Beach.
+- 🔲 **Kailua Beach Park** — Long white sand beach adjacent to Lanikai with calm, clear water. Excellent for kayaking and paddleboarding to the twin Mokulua Islands offshore. Windward O'ahu is worth a half-day.
+- 🔲 **Waimea Bay (North Shore)** — Legendary big-wave surf spot; flat and safe for swimming in summer. Beautiful clear water, scenic. ~1-hr drive from Waikiki — pair with Laniakea Beach and Haleiwa town for a full North Shore day.
+- 🔲 **Laniakea Beach / Turtle Beach (North Shore)** — Roadside pullout on Kamehameha Hwy between Haleiwa and Waimea Bay. Green sea turtles rest on the beach nearly every afternoon. Free. One of the easiest and most reliable turtle encounters in Hawaii.
 
 > 💡 **Snorkel gear:** Royal Hawaiian likely rents gear — ask at concierge. Or buy at Costco Iwilei (near airport) on arrival day for ~$25 and keep for Maui too.
 
@@ -99,6 +103,11 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 - 🔲 **Pearl Harbor / USS Arizona Memorial** — Most impactful site in Hawaii. Budget 3–4 hrs. Free but book 60+ days ahead — sells out. Includes boat ride to the memorial.
 - 🔲 **Iolani Palace** — Only official royal palace on US soil. Tours Tue–Sat. Book at [iolanipalace.org](https://www.iolanipalace.org). ~$30/person. 1–1.5 hrs.
 - 🔲 **Bishop Museum** — Hawaii's finest natural history/culture museum. $25/person. Add $3 for planetarium. Half-day activity.
+- 🔲 **Chinatown Honolulu** — Walkable historic district just west of downtown. Best street food on O'ahu — multiple veg-friendly Asian and health cafés, indie art galleries, murals. Saturday morning farmers market. Great half-day culture + food combo.
+- 🔲 **Punchbowl Crater / National Memorial Cemetery of the Pacific** — Military cemetery inside an extinct volcanic crater. Panoramic views of Honolulu, Diamond Head, and the ocean. Free, open daily. Unexpectedly moving — more peaceful than Pearl Harbor for a second history stop.
+- 🔲 **USS Bowfin Submarine Museum (Pearl Harbor)** — Preserved WWII submarine you can tour below deck. $27/person. Right next to the Arizona Memorial — easy same-day add to a Pearl Harbor visit.
+- 🔲 **Battleship Missouri Memorial (Pearl Harbor)** — The "Mighty Mo" where Japan's surrender was signed on Sep 2, 1945, ending WWII. $37/person. Very powerful — the contrast between the Missouri (end of war) and Arizona (start of US involvement) is profound.
+- 🔲 **Polynesian Cultural Center (La'ie, North Shore)** — Six Pacific island villages with live cultural demonstrations, canoe rides, and evening luau show. Full day, $70+. Vegetarian buffet available. 45-min drive. Great pairing with a North Shore day.
 
 ---
 
@@ -107,6 +116,12 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 - 🔲 **Diamond Head Crater Hike** — 1.8 miles, 560 ft elevation. Best at 7–8 AM (cooler, golden light, fewer crowds). Book 30 days ahead. Zero shade — sunscreen, hat, water essential.
 - 🔲 **Pu'u 'Ualaka'a Lookout (Tantalus)** — Hidden local gem at 1,000 ft. 180° panorama over Honolulu, Diamond Head, and Pearl Harbor. Free, no reservation. Stunning at sunset. 15-min drive from Waikiki.
 - 🔲 **Manoa Falls Hike** — Easy 1.6-mile hike through lush rainforest to a 150-ft waterfall. No reservation. $7 parking. Muddy — wear shoes you can get dirty.
+- 🔲 **Pillbox Hike / Kaiwa Ridge Trail (Lanikai)** — 2-mile round trip to two WWII concrete lookout bunkers. 360° views over Lanikai Beach and the Mokulua islands. Steep scramble at the start. Pairs perfectly with a Lanikai Beach morning.
+- 🔲 **Koko Head Crater Trail** — 1,048 steep railroad-tie steps up the crater rim. 30–45 min of intense cardio. Panoramic views of east O'ahu, Hanauma Bay, and Diamond Head. No shade — sunrise start only.
+- 🔲 **Makapu'u Lighthouse Trail** — Easy 2-mile paved coastal path to O'ahu's easternmost lighthouse. Broad ocean views, optional tide pool scramble at the base. No reservation required. Free.
+- 🔲 **Nu'uanu Pali Lookout** — Historic cliffside viewpoint at 1,200 ft where Kamehameha I won the decisive 1795 battle for O'ahu. Dramatic views down the windward coast. 15-min drive from Honolulu. Free.
+- 🔲 **Byodo-In Temple (Kane'ohe, Valley of the Temples)** — Stunning replica of a 900-year-old Japanese temple set against the Ko'olau mountain cliffs. Koi ponds, peacocks, a 9-ft Buddha. $5/person. Very peaceful and photogenic. Pair with a Kailua/Lanikai windward day.
+- 🔲 **Waimea Valley (North Shore)** — 1,800-acre botanical garden with a cultural history walk ending at a 45-ft waterfall swimming area. ~$20/person, life jackets provided. Great North Shore add-on after Laniakea Beach and Waimea Bay.
 
 ---
 
@@ -117,6 +132,13 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 - 🔲 **Leonard's Bakery** — Iconic malasadas (Portuguese donuts). Get them hot. Cash preferred. ~$2 each.
 - 🔲 **Ala Moana Food Court** — Excellent local options (Poke, plate lunch, etc). Best cheap lunch on Oahu.
 - 🔲 **Liliha Bakery** — Local institution. Famous for cocoa puffs (a cream-filled choux pastry). 24-hr location on N Kuakini St.
+- 🔲 **Tane Vegan Izakaya (Honolulu)** — Hawaii's best plant-based Japanese restaurant. Vegan sushi, izakaya small plates, creative drinks. Top pick for a special vegetarian dinner in Honolulu.
+- 🔲 **Govinda's (Honolulu, Nu'uanu)** — Vegetarian lunch buffet inside a Hare Krishna temple. Indian-influenced curries, dal, and sweets. Mon–Sat 11 AM–2 PM, ~$12–15. Best veg value on O'ahu.
+- 🔲 **Ganesh Dosa (Kailua)** — Excellent South Indian dosas, lunch and dinner. On the windward side — natural stop if spending a day at Lanikai Beach and Kailua.
+- 🔲 **Matsumoto Shave Ice (Haleiwa, North Shore)** — Hawaii's most iconic shave ice shop. Order "with ice cream and mochi inside." $5–7. Non-negotiable stop on a North Shore day.
+- 🔲 **Waialua Bakery (Haleiwa, North Shore)** — Family-run café using ingredients from their own farm. Excellent sandwiches, smoothies, and baked goods. Great lunch in Haleiwa town.
+- 🔲 **SALT at Our Kaka'ako** — Walkable open-air neighborhood 10 min from Waikiki. Local restaurants, food trucks, street art murals, and boutiques. Good evening alternative to the Waikiki tourist strip.
+- 🔲 **KCC Farmers Market (Kapi'olani Community College, near Diamond Head)** — Saturday 7:30–11 AM. Best local food market on O'ahu. Fresh produce, prepared food, coffee, and crafts. Natural pairing on a Diamond Head morning.
 
 > 💡 **Veg tip:** Oahu is actually great for vegetarians — lots of Japanese, Indian, and health-food spots in Honolulu. Avoid tourist traps on Kalakaua Ave — walk one block inland for better food and lower prices.
 
@@ -147,6 +169,9 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 - 🔲 **Kapalua Beach** — Protected cove in northwest Maui. Calm, beautiful, good snorkelling near the rocky edges. Turtle sightings very common. Quieter than south Maui.
 - 🔲 **Honolua Bay** — Raw and rugged. Outstanding coral reef. One of Maui's best snorkel spots but no facilities — bring everything. Accessed via a short dirt trail.
 - 🔲 **Keawakapu Beach (Kihei)** — Soft sand, calm clear water, minimal crowds. Close to Andaz (20-min drive). Great for morning walks and easy snorkelling near rocky outcrops.
+- 🔲 **Wailea Beach** — Premium white sand beach directly in the Wailea hotel corridor. Easy walking distance from Andaz. Calm, clear water. Best option for a quick morning swim without driving anywhere.
+- 🔲 **Po'olenalena Beach (South Kihei)** — Quiet, uncrowded golden sand beach south of Makena. Low-key locals' spot. Good snorkeling near the rocky edges. 25-min drive from Andaz.
+- 🔲 **Dragon's Teeth Rock Formation (Kapalua)** — Dramatic jagged lava rock spires created by ancient wave action. Very photogenic. End of Kapalua Coastal Trail. Free. Pair with Kapalua Beach on a west Maui day.
 
 > 💡 **Snorkel tip:** Andaz Maui is at Wailea — Keawakapu Beach is your backyard. For Molokini, depart from Maalaea Harbor (~20 min from Andaz).
 
@@ -161,6 +186,13 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 - 🔲 **Iao Valley State Park** — Sacred valley, iconic Iao Needle rock formation. **Currently CLOSED** — monitor for 2026 reopening at [gostateparks.hawaii.gov](https://gostateparks.hawaii.gov).
 - 🔲 **Ho'okipa Beach Park** — North Shore Maui. World-famous windsurfing. 40+ green sea turtles haul out on the beach in the evening (after ~3 PM). Free. Perfect stop on way to/from Paia.
 - 🔲 **Nakalele Blowhole** — Volcanic blowhole shooting water 50+ ft into the air. Dramatic north Maui coastal scenery. Moderate 20-min hike to reach. Don't get too close — sneaker waves are dangerous.
+- 🔲 **Twin Falls (Hana Hwy, Mile ~2)** — The first waterfall stop on Road to Hana: two beautiful cascades with a swimming pool, 20-min walk. No reservation. Perfect warm-up before the big stops further along the highway.
+- 🔲 **Pua'a Ka'a State Wayside (Hana Hwy, Mile ~22)** — Two small waterfalls with swimmable pools. Very underrated and much less crowded than Twin Falls. Easy pull-off stop mid–Hana drive.
+- 🔲 **Pipiwai Trail (Haleakalā NP — Kipahulu District)** — One of Maui's best hikes. 4 miles round trip through a towering bamboo forest to 400-ft Waimoku Falls. 2.5–4 hrs. No separate reservation — covered by the same $30 Haleakalā NP vehicle pass. At the end of Road to Hana near Hana Town. **Add this to Road to Hana day — it's the highlight for many people.**
+- 🔲 **Ohe'o Gulch / Seven Sacred Pools (Haleakalā NP — Kipahulu)** — Tiered freshwater pools cascading to the ocean. Covered by NP vehicle pass. Swimming depends on water conditions — check at Kipahulu Visitor Center on arrival. Pair with Pipiwai Trail.
+- 🔲 **Upcountry Maui / Kula** — Cool highlands at 2,000–3,000 ft above the coast. Sweeping views all the way to the ocean, lavender farms (Ali'i Kula Lavender), pineapple fields, a completely different feel. Great afternoon add-on after a Haleakalā sunrise or as a standalone drive.
+- 🔲 **Lahaina Town (West Maui)** — Historic whaling village rebuilding from the August 2023 wildfire. **Banyan Tree Park still closed as of May 2026** (late 2026 reopening anticipated — tree survived and is recovering). Front Street area is partially open. Check [mauicounty.gov](https://www.mauicounty.gov) for current access before visiting.
+- 🔲 **Maui Ocean Center (Mālaea Harbor)** — Hawaii's largest aquarium with a glass tunnel through a 750,000-gallon open ocean tank. $35/person. Right at Mālaea Harbor — natural pairing on Molokini departure morning. Good rainy-day or afternoon option.
 
 ---
 
@@ -173,6 +205,12 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 - 🔲 **Nuka Restaurant (Hana)** — Best restaurant in Hana for a Road to Hana lunch stop. Reservation recommended. Scenic location.
 - 🔲 **Roadside Banana Bread Stands (Hana Hwy)** — The famous Maui institution. Aunty Sandy's near mile marker 18 is the most beloved. Get it warm from the foil.
 - 🔲 **Andaz Wailea — Ka'ana Kitchen** — Andaz's own restaurant. Great farm-to-table breakfast (included with FHR). Worth trying for one dinner too — veg-friendly.
+- 🔲 **Café des Amis (Paia Town)** — French-Indian-Mediterranean café on Baldwin Ave in Paia. Outstanding vegetarian and vegan options: crêpes, curries, fresh bowls. A natural stop alongside Mama's Fish House or Flatbread on a Paia day.
+- 🔲 **Choice Health Bar (Paia Town)** — Award-winning vegan/vegetarian café on Baldwin Ave. Acai bowls, smoothies, cold-pressed juices. Great pre–Road to Hana fuel stop in Paia.
+- 🔲 **Pita Paradise (Wailea Village)** — Mediterranean restaurant 5 min from Andaz. Falafel, hummus, veggie pitas, Greek salad. Best nearby veg-friendly dinner option when you don't want to drive far.
+- 🔲 **Leoda's Kitchen & Pie Shop (Olowalu, Hwy 30)** — Famous sweet and savory pies and sandwiches on the road between Mālaea Harbor and Lahaina. Essential pit stop on any west Maui day.
+- 🔲 **Nutcharee's Thai Restaurant (South Kihei)** — Thai restaurant with many vegan and gluten-free options. Good for an easy lunch or dinner in the Kihei area.
+- 🔲 **Earth Aloha Eats (South Kihei)** — Vegan food truck with creative tacos, bowls, and wraps. Very vegetarian-friendly and popular with locals.
 
 > 💡 **Veg tip:** Paia Town (North Shore) is Maui's best hub for vegetarian food — multiple cafes, health food stores, and the famous Mana Foods grocery. Stock up on snacks for Road to Hana here.
 
