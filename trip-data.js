@@ -36,7 +36,7 @@ const TRIP_DATA = {
       { what: "🖤 Wai'anapanapa Black Sand Beach (Sep 1)", detail: "$5/person + $10/vehicle · 30-day window.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
       { what: "🌿 Iao Valley (if reopened)", detail: "Currently CLOSED — monitor site. $5/person + $10/vehicle.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
       { what: "💎 Diamond Head Crater (Sep 3)", detail: "$5/person + $10/vehicle · Book 7–8 AM slot.", url: "https://gostateparks.hawaii.gov/diamondhead/about", urlLabel: "gostateparks.hawaii.gov", when: "Aug 2 · 1 PM EDT", urgency: "soon" },
-      { what: "🐠 Hanauma Bay (Aug 28)", detail: "$25/person · 2-day window. Closed Mon & Tue.", url: "https://pros8.hnl.info/Home/Details/72", urlLabel: "pros8.hnl.info · Honolulu Parks & Rec", when: "Aug 26 · 1 PM EDT", urgency: "soon" }
+      { what: "🐠 Hanauma Bay (Aug 28)", detail: "$65/person · 2-day window. Closed Mon & Tue.", url: "https://hbay.robertshawaii.com/products/ed8ce1a1-fce7-5c8c-8f83-350366a8605d?lng=en-US", urlLabel: "hbay.robertshawaii.com · Honolulu Parks & Rec", when: "Aug 26 · 1 PM EDT", urgency: "soon" }
     ]
   },
 
@@ -60,7 +60,7 @@ const TRIP_DATA = {
           { status: "pending", title: "Hanauma Bay Snorkel",
             tags: [{ label: "Book 2 days ahead · Aug 26 @ 1 PM EDT", style: "res" }],
             body: "Protected volcanic crater bay — 400+ fish species. Best snorkel on O'ahu. Tickets drop at 7 AM HST sharp. Closed Mon & Tue. Arrive early.",
-            url: "https://pros8.hnl.info/Home/Details/72", urlLabel: "pros8.hnl.info · $25/person",
+            url: "https://hbay.robertshawaii.com/products/ed8ce1a1-fce7-5c8c-8f83-350366a8605d?lng=en-US", urlLabel: "hbay.robertshawaii.com · $65/person",
             photo: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&auto=format&fit=crop" }
         ]
       },
@@ -94,7 +94,7 @@ const TRIP_DATA = {
         title: "History & Culture", icon: "🏛️",
         items: [
           { status: "pending", title: "Iolani Palace",
-            body: "Only official royal palace on US soil. Tours Tue–Sat. ~$30/person. 1–1.5 hrs.",
+            body: "Only official royal palace on US soil. Tours Tue–Sat. ~$6 – $30/person. 1–1.5 hrs.",
             url: "https://www.iolanipalace.org", urlLabel: "iolanipalace.org" },
           { status: "pending", title: "Bishop Museum",
             body: "Hawaii's finest natural history & culture museum. $25/person. Add $3 for planetarium. Half-day activity." },
