@@ -2,7 +2,7 @@
 **Priyank & Saloni · August 27 – September 4, 2026**
 O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 
-> *Living research & planning reference. Nothing confirmed or booked yet unless marked ✅.*
+> *Living research & planning reference. ✅ = Confirmed/Booked · 🔲 = Under consideration · ❌ = Ruled out · ⏳ = Monitoring*
 
 ---
 
@@ -25,12 +25,10 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 | 🗓 Act On | For | What | Where | Cost |
 |-----------|-----|------|-------|------|
 | **ASAP NOW** | Sep 3–4 dinner | Mama's Fish House | [mamasfishhouse.com](https://www.mamasfishhouse.com) — call or OpenTable | ~$80–120/person |
-| **ASAP NOW** | Aug 31–Sep 4 | Andaz Maui FHR — book before Jun 30 deadline! | [AmexTravel.com](https://travel.americanexpress.com) | $750 property credit expires |
+| **ASAP NOW** | Aug 31–Sep 4 | ⭐ Andaz Maui (FHR) — book before **Jun 30** deadline! | [AmexTravel.com](https://travel.americanexpress.com) | $750 property credit expires |
 | **ASAP NOW** | Entire trip | Pearl Harbor USS Arizona | [recreation.gov](https://recreation.gov) | Free + $1 fee |
-| **ASAP NOW** | Aug 31–Sep 2 | HNL → OGG inter-island flight | [Hawaiian Airlines](https://www.hawaiianairlines.com) or [Southwest](https://www.southwest.com) | ~$60–90 |
 | **ASAP NOW** | Aug 31–Sep 1 | Molokini snorkel tour | [Trilogy](https://sailtrilogy.com) or [Pride of Maui](https://www.prideofmaui.com) | ~$120–150/person |
 | **Jul 4 · 1 PM Columbus** | Sep 3 sunrise | Haleakalā Sunrise (60-day window) | [recreation.gov](https://recreation.gov) | $1 + $30/vehicle |
-| **Jul 28 · 1 PM Columbus** | Aug 27 arrival | Royal Hawaiian FHR booking | [AmexTravel.com](https://travel.americanexpress.com) | After Jul 1 for $300 credit |
 | **Aug 1 · 1 PM Columbus** | Sep 1 | Wai'anapanapa Black Sand Beach | [gostateparks.hawaii.gov](https://gostateparks.hawaii.gov) | $5/person + $10/vehicle |
 | **Aug 1 · 1 PM Columbus** | Sep 1 | Iao Valley (if reopened) | [gostateparks.hawaii.gov](https://gostateparks.hawaii.gov) | $5/person + $10/vehicle |
 | **Aug 2 · 1 PM Columbus** | Sep 3 | Diamond Head Crater (30-day window) | [hawaiistateparks.reserveamerica.com](https://hawaiistateparks.reserveamerica.com) | $5/person + $10/vehicle |
@@ -42,37 +40,53 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 
 ## ✈️ Flights — Alaska Airlines
 
-| Segment | Route | Departs | Arrives | Notes |
-|---------|-------|---------|---------|-------|
-| AS 450 | CMH → SEA | Thu Aug 27 · 5:35 PM | Thu Aug 27 · 7:38 PM | 74-min layover — stay near gate |
-| AS 901 | SEA → HNL | Thu Aug 27 · 8:52 PM | Thu Aug 27 · 11:59 PM HST | Arrive late night |
-| **⚠️ BOOK** | **HNL → OGG** | **Aug 31 TBD** | **Aug 31 TBD** | **NOT on Alaska ticket — ~35 min, ~$60–90** |
-| AS 122 | OGG → HNL → SEA | Fri Sep 4 · 9:20 PM | Sat Sep 5 · 6:11 AM | Check OGG departure time |
-| AS 450 | SEA → CMH | Sat Sep 5 · 9:10 AM | Sat Sep 5 · 4:37 PM | 59-min layover |
+> ✅ All flights confirmed · Alaska conf: **DNNZPU** (Amex #7477-9123) · Inter-island conf: **UTRDIC** (Amex #7479-1373)
+> ⚠️ **Seats are NOT together on the long-haul legs** — contact Alaska Airlines to try to swap into adjacent seats.
 
-> 💡 **Inter-island tip:** Hawaiian Airlines has the most flights HNL↔OGG (every ~1 hr). Southwest is often cheaper. Book at least 6–8 weeks ahead. Aim for a morning flight Aug 31 to maximize your first Maui afternoon.
-> ⚠️ Royal Hawaiian: arriving ~1 AM Aug 28. Room booked from Aug 27. **Email hotel to confirm late-night arrival hold** — do this 1 week before.
+| Segment | Route | Departs | Arrives | Seats | Notes |
+|---------|-------|---------|---------|-------|-------|
+| ✅ AS 450 | CMH → SEA | Thu Aug 27 · 5:35 PM | Thu Aug 27 · 7:38 PM | 11A / 24A ⚠️ | 74-min layover — stay near gate |
+| ✅ AS 901 | SEA → HNL | Thu Aug 27 · 8:52 PM | Thu Aug 27 · 11:59 PM HST | 15A / 24A ⚠️ | Arrive late night |
+| ✅ AS 1136 | HNL → OGG | Mon Aug 31 · 2:24 PM | Mon Aug 31 · 3:07 PM | 14A / 14B ✓ | Together! · Conf: UTRDIC · $439.58 total |
+| ✅ AS 1175 | OGG → HNL | Fri Sep 4 · 4:51 PM | Fri Sep 4 · 5:30 PM | 11A / 11B ✓ | Together! · Conf: UTRDIC · ~3.5 hr HNL connection |
+| ✅ AS 122 | HNL → SEA | Fri Sep 4 · 9:20 PM | Sat Sep 5 · 6:11 AM | 16E / 38J ⚠️ | Long overnight — seats not together |
+| ✅ AS 450 | SEA → CMH | Sat Sep 5 · 9:10 AM | Sat Sep 5 · 4:37 PM | 11D / 21A ⚠️ | 59-min layover · seats not together |
+
+> 💡 **Aug 31 inter-island:** AS 1136 departs HNL 2:24 PM — morning free on O'ahu before flying to Maui.
+> ⚠️ **Prince Waikiki:** arriving ~1 AM Aug 28. Special midnight arrival request noted in booking. **Confirm with hotel 1 week before.**
 
 ---
 
-## 🏨 Hotels — Amex Fine Hotels & Resorts
+## 🏨 Hotels
 
-| Island | Hotel | Dates | Nightly | FHR Perks |
-|--------|-------|-------|---------|-----------|
-| O'ahu | The Royal Hawaiian, Luxury Collection | Aug 27–31 (4 nights) | ~$500–700 | $100 credit · Breakfast for 2 · Upgrade · 4 PM checkout |
-| Maui | **Andaz Maui at Wailea Resort** ⭐ | Aug 31–Sep 4 (4 nights) | ~$700–900 | **$750 credit** · Breakfast for 2 · Upgrade · 4 PM checkout |
+| Island | Hotel | Dates | Conf | Cost | Status |
+|--------|-------|-------|------|------|--------|
+| O'ahu | **Prince Waikiki** (The Hotel Collection) | Aug 27–31 · 4 nights | #9088065477490 | $1,276.47 (37,137 MR pts) | ✅ Confirmed |
+| Maui | **Andaz Maui at Wailea Resort** ⭐ (FHR) | Aug 31–Sep 4 · 4 nights | NOT BOOKED YET | ~$700–900/night | 🔲 **⚠️ Book by Jun 30!** |
+
+### Prince Waikiki — O'ahu (✅ Confirmed)
+- **Address:** 100 Holomoana St, Honolulu, HI 96815
+- **Room:** Ocean Front Harbor · 1 King Bed
+- **Check-in:** Aug 27, 3 PM · Check-out: Aug 31, 11 AM
+- **Tier:** The Hotel Collection (not FHR — no daily breakfast included)
+- **Property credit:** $150
+- **Payment:** 100% non-refundable · Paid with 37,137 MR points ($1,276.47 value)
+- **Special request:** Midnight arrival noted in booking. **Confirm with hotel 1 week before.**
+
+### Andaz Maui at Wailea Resort — Maui (🔲 NOT YET BOOKED)
+- **⚠️ $750 FHR property credit expires Jun 30 — book immediately via AmexTravel.com**
+- FHR perks: $750 property credit · Breakfast for 2 daily · Room upgrade · 4 PM late checkout
+- Call Amex Travel at **1-800-297-2977** (FHR dedicated line) rather than booking online — agents can secure better room categories
 
 > 💳 **Amex credit strategy:**
-> - Book **Andaz Maui NOW** via AmexTravel → captures Jan–Jun $300 statement credit AND locks $750 property credit before **Jun 30 deadline**.
-> - Book **Royal Hawaiian after Jul 1** via AmexTravel → captures Jul–Dec $300 statement credit.
-> - Total statement credits: **$600** | Property credits: **$850** | FHR breakfast (~$60/day × 8 nights): **~$480 value**
->
-> 💡 **FHR tip:** Always call Amex Travel at 1-800-297-2977 (FHR line) rather than booking online — agents can sometimes secure better room categories and flag unadvertised upgrades.
+> - ✅ Prince Waikiki already booked (37,137 MR points)
+> - Book **Andaz Maui NOW** via AmexTravel → Jun–Jan $300 statement credit + $750 property credit before Jun 30 deadline
+> - Total remaining value: $750 property credit + $300 statement credit + FHR breakfast (~$60/day × 4 Maui nights = ~$240)
 
 ---
 
 ## 🌺 O'ahu — Aug 27–31
-> Arrive ~midnight Aug 27/28 · 4 nights at Royal Hawaiian · Waikiki base
+> Arrive ~midnight Aug 27/28 · 4 nights at **Prince Waikiki** (The Hotel Collection) · Near Ala Moana, Waikiki walkable
 
 ### 🎫 Must-Reserve Attractions
 
@@ -145,7 +159,7 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 ---
 
 ## 🌋 Maui — Aug 31–Sep 4
-> Fly HNL→OGG Aug 31 morning · 4 nights at Andaz Maui, Wailea · Pick up rental car at OGG
+> ✅ AS 1136 HNL→OGG departs 2:24 PM Aug 31 · 4 nights at **Andaz Maui, Wailea** (not yet booked — urgent!) · Pick up rental car at OGG
 
 ### 🎫 Must-Reserve Attractions
 
@@ -251,19 +265,19 @@ O'ahu (Aug 27–31) · Maui (Aug 31–Sep 4)
 
 | Day | Date | Island | Anchor Activity |
 |-----|------|--------|----------------|
-| Day 1 | Thu Aug 27 | Travel | CMH→SEA→HNL. Arrive ~midnight. Check in Royal Hawaiian. |
-| Day 2 | Fri Aug 28 | O'ahu | Rest morning (late arrival). Afternoon: Waikiki Beach walk, Ala Moana. |
+| Day 1 | Thu Aug 27 | Travel | AS 450 CMH→SEA 5:35 PM · AS 901 SEA→HNL 8:52 PM. Arrive ~midnight. Check in Prince Waikiki. |
+| Day 2 | Fri Aug 28 | O'ahu | Rest morning (late arrival). Afternoon: Waikiki Beach walk, Ala Moana area. |
 | Day 3 | Sat Aug 29 | O'ahu | Pearl Harbor (morning, 3–4 hrs) + Pu'u 'Ualaka'a sunset lookout. |
-| Day 4 | Sun Aug 30 | O'ahu | Hanauma Bay snorkel (morning) + Diamond Head hike (early) — or split over 2 days. |
-| Day 5 | Mon Aug 31 | O'ahu → Maui | Morning: Iolani Palace or Bishop Museum. Afternoon: fly HNL→OGG. Pick up car. Andaz check-in. |
+| Day 4 | Sun Aug 30 | O'ahu | Hanauma Bay snorkel (morning) + Diamond Head hike — or split over 2 days. |
+| Day 5 | Mon Aug 31 | O'ahu → Maui | Morning free (AS 1136 departs 2:24 PM). Iolani Palace or Bishop Museum. ✅ AS 1136 HNL→OGG 2:24 PM · Pick up car · Andaz check-in. |
 | Day 6 | Tue Sep 1 | Maui | Molokini Crater snorkel (morning depart) + Wai'anapanapa Black Sand Beach (afternoon). |
 | Day 7 | Wed Sep 2 | Maui | **Road to Hana** — full day. Leave 6:30 AM. Wailua Falls, banana bread, Hana town. |
 | Day 8 | Thu Sep 3 | Maui | **Haleakalā Sunrise** (3 AM wake-up) + rest afternoon. Mama's Fish House dinner. |
-| Day 9 | Fri Sep 4 | Maui | Beach morning (Makena or Kapalua). Tin Roof lunch near OGG. Depart 9:20 PM. |
-| Day 10 | Sat Sep 5 | Travel | SEA layover → CMH. Arrive 4:37 PM. |
+| Day 9 | Fri Sep 4 | Maui → Travel | Beach morning. Tin Roof lunch. ✅ AS 1175 OGG→HNL 4:51 PM · ~3.5 hr HNL connection · ✅ AS 122 HNL→SEA 9:20 PM. |
+| Day 10 | Sat Sep 5 | Travel | SEA 59-min layover · AS 450 SEA→CMH 9:10 AM. Arrive Columbus 4:37 PM. |
 
 > This is a skeleton only — adjust based on what you book and how you feel. Don't over-schedule Maui; the island rewards slow mornings.
 
 ---
 
-*Last updated: May 2026 · Built with Claude · Itinerary to be confirmed after bookings*
+*Last updated: June 2026 · Built with Claude · Flights ✅ confirmed · Prince Waikiki ✅ confirmed · Andaz Maui ⚠️ still to book*

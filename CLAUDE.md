@@ -117,7 +117,7 @@ When adding a stop to the schedule, always include all four fields.
 - **Diet:** Strictly vegetarian — no meat, seafood, eggs, or alcohol. Always flag veg-friendliness when adding restaurants.
 - **Base timezone for booking alarms:** Columbus, Ohio (EDT in summer = UTC−4). HST = EDT − 6.
 - **Travel style:** Mix of adventure (hikes, snorkel) and relaxation. Appreciate insider tips and avoiding tourist traps.
-- **Hotels:** Amex Fine Hotels & Resorts bookings — always note FHR perks when relevant.
+- **Hotels:** O'ahu = **Prince Waikiki (The Hotel Collection)** — $150 credit, no FHR breakfast. Maui = **Andaz Maui (FHR, not yet booked)** — $750 credit + breakfast included. Distinguish between THC and FHR when noting perks.
 
 ---
 

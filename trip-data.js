@@ -22,7 +22,7 @@ const TRIP_DATA = {
     dates: "Aug 27 – Sep 4, 2026",
     oahu: "O'ahu: Aug 27–31",
     maui: "Maui: Aug 31–Sep 4",
-    lastUpdated: "May 2026"  // update this when making changes
+    lastUpdated: "June 2026"  // update this when making changes
   },
 
   timezone: "HST = Columbus (EDT) − 6 hrs in summer. A 7 AM HST booking window = <strong>1 PM Columbus time.</strong> Set alarms 10 min early — these sell out in seconds.",
@@ -30,15 +30,13 @@ const TRIP_DATA = {
   // ── BOOKINGS ─────────────────────────────────────────────
   bookings: {
     urgent: [
+      { what: "⭐ Andaz Maui (FHR) — Book before Jun 30!", url: "https://travel.americanexpress.com", urlLabel: "AmexTravel.com", note: "$750 FHR property credit expires Jun 30 — call 1-800-297-2977" },
       { what: "Mama's Fish House — Maui dinner", url: "https://www.mamasfishhouse.com", urlLabel: "mamasfishhouse.com", note: "~$80–120/person · Ask about veg options when booking" },
-      { what: "⭐ Andaz Maui — Book before Jun 30!", url: "https://travel.americanexpress.com", urlLabel: "AmexTravel.com", note: "$750 property credit expires Jun 30" },
       { what: "Pearl Harbor USS Arizona", url: "https://recreation.gov", urlLabel: "recreation.gov", note: "Free + $1 fee" },
-      { what: "HNL → OGG inter-island flight (Aug 31)", url: "https://www.hawaiianairlines.com", urlLabel: "Hawaiian Airlines or Southwest", note: "~$60–90 · NOT on Alaska ticket!" },
       { what: "Molokini Snorkel Tour (Sep 1)", url: "https://sailtrilogy.com", urlLabel: "Trilogy or Pride of Maui", note: "~$120–150/person" }
     ],
     timed: [
       { what: "🌅 Haleakalā Sunrise (Sep 3)", detail: "$1 + $30/vehicle · 60-day window. Also book Sep 2 backup (Jul 3).", url: "https://recreation.gov", urlLabel: "recreation.gov", when: "Jul 4 · 1 PM EDT", urgency: "asap" },
-      { what: "🏨 Royal Hawaiian FHR", detail: "Book after Jul 1 to capture Jul–Dec $300 statement credit.", url: "https://travel.americanexpress.com", urlLabel: "AmexTravel.com", when: "Jul 28 · 1 PM EDT", urgency: "soon" },
       { what: "🖤 Wai'anapanapa Black Sand Beach (Sep 1)", detail: "$5/person + $10/vehicle · 30-day window.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
       { what: "🌿 Iao Valley (if reopened)", detail: "Currently CLOSED — monitor site. $5/person + $10/vehicle.", url: "https://gostateparks.hawaii.gov", urlLabel: "gostateparks.hawaii.gov", when: "Aug 1 · 1 PM EDT", urgency: "soon" },
       { what: "💎 Diamond Head Crater (Sep 3)", detail: "$5/person + $10/vehicle · Book 7–8 AM slot.", url: "https://gostateparks.hawaii.gov/diamondhead/about", urlLabel: "gostateparks.hawaii.gov", when: "Aug 2 · 1 PM EDT", urgency: "soon" },
@@ -48,7 +46,7 @@ const TRIP_DATA = {
 
   // ── O'AHU ─────────────────────────────────────────────────
   oahu: {
-    info: "4 nights at The Royal Hawaiian, Waikiki. Arriving ~midnight Aug 27/28.",
+    info: "4 nights at Prince Waikiki (The Hotel Collection). Near Ala Moana — Waikiki is walkable. Arriving ~midnight Aug 27/28.",
     sections: [
       {
         title: "Needs Reservation", icon: "🎫",
@@ -304,7 +302,7 @@ const TRIP_DATA = {
             body: "Mediterranean restaurant 5 min from Andaz. Falafel, hummus, veggie pitas, Greek salad. Best nearby veg-friendly dinner when you don't want to drive far." },
           { status: "pending", title: "Ka'ana Kitchen — Andaz Wailea",
             tags: [{ label: "Veg-friendly", style: "veg" }],
-            body: "Andaz's own farm-to-table restaurant. Breakfast included with FHR. Worth trying for one dinner too." },
+            body: "Andaz's own farm-to-table restaurant. Breakfast included if booked through FHR. Worth trying for one dinner too — great farm-to-table veg options." },
           { status: "pending", title: "Leoda's Kitchen & Pie Shop — Olowalu",
             body: "Famous sweet and savory pies and sandwiches on the road between Mālaea Harbor and Lahaina. Essential pit stop on any west Maui day." },
           { status: "pending", title: "Nutcharee's Thai — South Kihei",
@@ -322,34 +320,35 @@ const TRIP_DATA = {
 
   // ── ITINERARY ─────────────────────────────────────────────
   itinerary: [
-    { day: 1,  date: "Aug 27", dow: "Thu", island: "✈️ Travel",       title: "CMH → SEA → HNL",                    desc: "Depart Columbus 5:35 PM. 74-min SEA layover. Arrive Honolulu ~midnight. Check in Royal Hawaiian." },
-    { day: 2,  date: "Aug 28", dow: "Fri", island: "🌺 O'ahu",         title: "Easy arrival day",                   desc: "Rest morning after late arrival. Afternoon: Waikiki Beach walk, explore Ala Moana. Leonard's Bakery for malasadas." },
+    { day: 1,  date: "Aug 27", dow: "Thu", island: "✈️ Travel",       title: "CMH → SEA → HNL",                    desc: "AS 450 departs Columbus 5:35 PM (seats 11A/24A). 74-min SEA layover. AS 901 to HNL 8:52 PM (seats 15A/24A). Arrive ~midnight. Check in Prince Waikiki." },
+    { day: 2,  date: "Aug 28", dow: "Fri", island: "🌺 O'ahu",         title: "Easy arrival day",                   desc: "Rest morning after late arrival. Afternoon: Waikiki Beach walk, explore Ala Moana area (5-min walk from Prince Waikiki). Leonard's Bakery for malasadas." },
     { day: 3,  date: "Aug 29", dow: "Sat", island: "🌺 O'ahu",         title: "Pearl Harbor + Sunset Lookout",      desc: "Pearl Harbor morning (3–4 hrs). Afternoon: Pu'u 'Ualaka'a Lookout for sunset panorama." },
     { day: 4,  date: "Aug 30", dow: "Sun", island: "🌺 O'ahu",         title: "Hanauma Bay + Diamond Head",         desc: "Early morning: Hanauma Bay snorkel. Afternoon: Diamond Head hike — or split over two days." },
-    { day: 5,  date: "Aug 31", dow: "Mon", island: "🌺→🌋 Island Hop", title: "Iolani Palace → Fly to Maui",        desc: "Morning: Iolani Palace or Bishop Museum. Afternoon: fly HNL→OGG. Pick up rental car. Andaz Maui check-in." },
+    { day: 5,  date: "Aug 31", dow: "Mon", island: "🌺→🌋 Island Hop", title: "Iolani Palace → ✅ AS 1136 → Maui",   desc: "Morning free (flight at 2:24 PM). Iolani Palace or Bishop Museum. ✅ AS 1136 HNL→OGG departs 2:24 PM, seats 14A/14B (conf UTRDIC). Pick up rental car. Andaz Maui check-in." },
     { day: 6,  date: "Sep 1",  dow: "Tue", island: "🌋 Maui",          title: "Molokini + Black Sand Beach",        desc: "Early morning: Molokini Crater snorkel catamaran (depart Mālaea ~7 AM). Afternoon: Wai'anapanapa Black Sand Beach." },
     { day: 7,  date: "Sep 2",  dow: "Wed", island: "🌋 Maui",          title: "Road to Hāna — Full Day",           desc: "Leave Andaz by 6:30 AM. Twin Falls, Wailua Falls, Aunty Sandy's banana bread, Pipiwai Trail, Hana town." },
     { day: 8,  date: "Sep 3",  dow: "Thu", island: "🌋 Maui",          title: "🌅 Haleakalā + Mama's Dinner",      desc: "3 AM wake-up for Haleakalā summit sunrise. Stay for Sliding Sands Trail crater hike. Rest afternoon. Mama's Fish House dinner." },
-    { day: 9,  date: "Sep 4",  dow: "Fri", island: "🌋→✈️ Departure",  title: "Beach morning → Depart",            desc: "Morning: Makena Beach or Kapalua. Tin Roof lunch near OGG. Depart Maui 9:20 PM." },
+    { day: 9,  date: "Sep 4",  dow: "Fri", island: "🌋→✈️ Departure",  title: "Beach morning → OGG→HNL→SEA",       desc: "Morning: Makena Beach or Kapalua. Tin Roof lunch near OGG. ✅ AS 1175 OGG→HNL 4:51 PM (seats 11A/11B). ~3.5 hr HNL layover. ✅ AS 122 HNL→SEA 9:20 PM (seats 16E/38J)." },
     { day: 10, date: "Sep 5",  dow: "Sat", island: "✈️ Travel",        title: "SEA → CMH · Home",                  desc: "Seattle layover 59 min. Arrive Columbus 4:37 PM." }
   ],
 
   // ── LOGISTICS ─────────────────────────────────────────────
   logistics: {
     flights: [
-      { num: "AS 450", route: "CMH → SEA", time: "Thu Aug 27 · 5:35 PM → 7:38 PM", note: "74-min layover — stay near gate", alert: false },
-      { num: "AS 901", route: "SEA → HNL", time: "Thu Aug 27 · 8:52 PM → 11:59 PM HST", note: "Arrive late night", alert: false },
-      { num: "⚠️ BOOK", route: "HNL → OGG (Maui)", time: "Aug 31 · Time TBD · ~35 min flight", note: "NOT on Alaska ticket! ~$60–90", alert: true },
-      { num: "AS 122", route: "OGG → HNL → SEA", time: "Fri Sep 4 · 9:20 PM → Sat 6:11 AM", note: "Via HNL", alert: false },
-      { num: "AS 450", route: "SEA → CMH", time: "Sat Sep 5 · 9:10 AM → 4:37 PM", note: "59-min layover", alert: false }
+      { num: "AS 450", route: "CMH → SEA", time: "Thu Aug 27 · 5:35 PM → 7:38 PM · Seats 11A / 24A", note: "⚠️ Seats not together — contact Alaska", alert: true },
+      { num: "AS 901", route: "SEA → HNL", time: "Thu Aug 27 · 8:52 PM → 11:59 PM HST · Seats 15A / 24A", note: "⚠️ Seats not together · Conf: DNNZPU", alert: true },
+      { num: "AS 1136", route: "HNL → OGG", time: "Mon Aug 31 · 2:24 PM → 3:07 PM · Seats 14A / 14B", note: "✓ Together · Conf: UTRDIC", alert: false },
+      { num: "AS 1175", route: "OGG → HNL", time: "Fri Sep 4 · 4:51 PM → 5:30 PM · Seats 11A / 11B", note: "✓ Together · ~3.5 hr HNL layover · Conf: UTRDIC", alert: false },
+      { num: "AS 122", route: "HNL → SEA", time: "Fri Sep 4 · 9:20 PM → Sat Sep 5 · 6:11 AM · Seats 16E / 38J", note: "⚠️ Seats not together · Conf: DNNZPU", alert: true },
+      { num: "AS 450", route: "SEA → CMH", time: "Sat Sep 5 · 9:10 AM → 4:37 PM · Seats 11D / 21A", note: "⚠️ Seats not together · 59-min layover", alert: true }
     ],
     hotels: [
-      { name: "The Royal Hawaiian, Luxury Collection", island: "O'ahu", dates: "Aug 27–31 · 4 nights · Waikiki", nightly: "~$500–700", star: false,
-        perks: ["💳 $100 property credit", "🥐 Breakfast for 2 daily (included)", "⬆️ Room upgrade (subject to availability)", "🕓 4 PM late checkout", "⚠️ Arriving ~1 AM Aug 28 — email hotel to confirm late-night hold"] },
-      { name: "⭐ Andaz Maui at Wailea Resort", island: "Maui", dates: "Aug 31–Sep 4 · 4 nights · Wailea", nightly: "~$700–900", star: true,
-        perks: ["💳 $750 property credit — expires Jun 30, book NOW", "🥐 Breakfast for 2 daily (included)", "⬆️ Room upgrade (subject to availability)", "🕓 4 PM late checkout"] }
+      { name: "✅ Prince Waikiki (The Hotel Collection)", island: "O'ahu", dates: "Aug 27–31 · 4 nights · Near Ala Moana", nightly: "Paid: $1,276.47 (37,137 MR pts)", star: false,
+        perks: ["✅ Confirmed · Conf #9088065477490", "🛏 Ocean Front Harbor · 1 King Bed", "💳 $150 property credit", "⬆️ Room upgrade (subject to availability)", "🕓 100% non-refundable", "⚠️ Arriving ~1 AM Aug 28 — midnight arrival noted, confirm 1 week before"] },
+      { name: "🔲 ⭐ Andaz Maui at Wailea Resort (FHR)", island: "Maui", dates: "Aug 31–Sep 4 · 4 nights · Wailea", nightly: "~$700–900", star: true,
+        perks: ["⚠️ NOT YET BOOKED — Jun 30 deadline for $750 credit!", "💳 $750 FHR property credit — book NOW via AmexTravel.com", "🥐 Breakfast for 2 daily (FHR perk)", "⬆️ Room upgrade (subject to availability)", "🕓 4 PM late checkout"] }
     ],
-    amexTip: "Book <strong>Andaz Maui NOW</strong> → Jan–Jun $300 statement credit + $750 property credit before Jun 30 deadline. Book <strong>Royal Hawaiian after Jul 1</strong> → Jul–Dec $300 statement credit.<br>Total value: $600 statement + $850 property + ~$480 breakfast (FHR, 8 nights) = <strong>~$1,930</strong>",
+    amexTip: "✅ Prince Waikiki booked (37,137 MR pts · $150 credit). <strong>Book Andaz Maui NOW</strong> via AmexTravel.com or call 1-800-297-2977 → $750 FHR property credit + $300 statement credit before Jun 30 deadline.<br>Remaining value: $750 property + $300 statement + ~$240 breakfast (FHR, 4 Maui nights) = <strong>~$1,290</strong>",
     car: "Pick up at OGG on Aug 31 arrival. <strong>Book NOW</strong> — Maui cars sell out in summer. Budget/Alamo/National tend to have best rates. Get a <strong>standard SUV</strong> (not economy) — roads to Haleakalā and Hana Hwy benefit from extra clearance. Most rental agreements prohibit driving Pi'ilani Hwy 31 (back road of Hana) — check your policy. Rental car <strong>not needed on O'ahu</strong> — Waikiki is walkable; Uber/Lyft fine for Pearl Harbor, Hanauma Bay, etc."
   },
 
@@ -398,14 +397,14 @@ const TRIP_DATA = {
         { name: "Columbus Airport (CMH) — Depart 5:35 PM", duration: "—", maps: "https://maps.google.com/?q=John+Glenn+Columbus+International+Airport" },
         { name: "Seattle–Tacoma Airport (SEA) — 74-min layover", duration: "1.25 hrs", maps: "https://maps.google.com/?q=Seattle-Tacoma+International+Airport" },
         { name: "Honolulu Airport (HNL) — Arrive ~midnight", duration: "—", maps: "https://maps.google.com/?q=Daniel+K.+Inouye+International+Airport" },
-        { name: "The Royal Hawaiian — Check in", duration: "—", maps: "https://maps.google.com/?q=The+Royal+Hawaiian+Waikiki" }
+        { name: "Prince Waikiki — Check in (midnight arrival noted)", duration: "—", note: "100 Holomoana St · Conf #9088065477490 · $150 property credit", maps: "https://maps.google.com/?q=Prince+Waikiki+Honolulu" }
       ]
     },
     {
       day: 2, date: "Aug 28", dow: "Fri", island: "🌺 O'ahu",
       title: "Easy Arrival Day",
       stops: [
-        { name: "The Royal Hawaiian — Amex breakfast", duration: "1 hr", note: "Included with FHR — eat before exploring", maps: "https://maps.google.com/?q=The+Royal+Hawaiian+Waikiki" },
+        { name: "Prince Waikiki — Breakfast", duration: "1 hr", note: "Note: Hotel Collection (not FHR) — breakfast not included. Check hotel café or grab from nearby Ala Moana area", maps: "https://maps.google.com/?q=Prince+Waikiki+Honolulu" },
         { name: "Waikiki Beach / Kuhio Beach", duration: "2–3 hrs", note: "Walk the strip, wade in, settle in to island time", maps: "https://maps.google.com/?q=Kuhio+Beach+Park+Waikiki+Honolulu" },
         { name: "Ala Moana Center & Beach Park", duration: "1.5–2 hrs", note: "Large open-air mall + locals' beach right next door", maps: "https://maps.google.com/?q=Ala+Moana+Beach+Park+Honolulu" },
         { name: "Leonard's Bakery — Malasadas", duration: "20 min", note: "Get them hot. Non-negotiable first-day treat", maps: "https://maps.google.com/?q=Leonard%27s+Bakery+Honolulu" }
@@ -437,7 +436,7 @@ const TRIP_DATA = {
       stops: [
         { name: "Iolani Palace", duration: "1–1.5 hrs", note: "Open Tue–Sat — check hours. ~$6–$30/person", maps: "https://maps.google.com/?q=Iolani+Palace+Honolulu" },
         { name: "Chinatown Honolulu (optional)", duration: "1 hr", note: "Very veg-friendly — grab a quick lunch before heading to airport", maps: "https://maps.google.com/?q=Chinatown+Honolulu" },
-        { name: "Honolulu Airport HNL → OGG (inter-island)", duration: "35 min flight", note: "NOT on Alaska ticket — book separately ~$60–90. Allow 90 min at HNL", maps: "https://maps.google.com/?q=Daniel+K.+Inouye+International+Airport" },
+        { name: "✅ AS 1136 HNL → OGG (confirmed)", duration: "35 min flight", note: "Departs 2:24 PM · Arrives 3:07 PM · Seats 14A/14B · Conf UTRDIC. Allow 90 min at HNL before departure", maps: "https://maps.google.com/?q=Daniel+K.+Inouye+International+Airport" },
         { name: "Pick up rental car at OGG", duration: "30 min", note: "Book SUV NOW — Maui cars sell out in summer", maps: "https://maps.google.com/?q=Kahului+Airport+Maui" },
         { name: "Andaz Maui at Wailea Resort — Check in", duration: "—", maps: "https://maps.google.com/?q=Andaz+Maui+at+Wailea+Resort" }
       ]
@@ -485,7 +484,8 @@ const TRIP_DATA = {
       stops: [
         { name: "Makena Beach (Big Beach) or Kapalua Beach", duration: "2–3 hrs", note: "Final morning swim. Makena = dramatic big waves. Kapalua = calm, good snorkeling", maps: "https://maps.google.com/?q=Makena+State+Park+Beach+Maui" },
         { name: "Tin Roof — Lunch near OGG", duration: "1 hr", note: "Chef Sheldon Simeon's casual local spot — perfect farewell meal before airport", maps: "https://maps.google.com/?q=Tin+Roof+Maui+Kahului" },
-        { name: "Return rental car + Kahului Airport (OGG)", duration: "1.5 hrs", note: "Depart 9:20 PM — arrive 2–2.5 hrs early. Allow extra time for car return shuttle", maps: "https://maps.google.com/?q=Kahului+Airport+Maui" }
+        { name: "Return rental car + ✅ AS 1175 OGG→HNL", duration: "1.5 hrs + flight", note: "Departs 4:51 PM · Arrives HNL 5:30 PM · Seats 11A/11B. Arrive OGG 2.5 hrs early for car return", maps: "https://maps.google.com/?q=Kahului+Airport+Maui" },
+        { name: "HNL Layover (~3.5 hrs) → ✅ AS 122 HNL→SEA", duration: "3.5 hrs + overnight", note: "Departs HNL 9:20 PM · Seats 16E/38J (not together). Arrive Seattle 6:11 AM Sep 5", maps: "https://maps.google.com/?q=Daniel+K.+Inouye+International+Airport" }
       ]
     },
     {
